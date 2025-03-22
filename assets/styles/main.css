@@ -901,7 +901,7 @@ ul:not([class]) {
   padding-block: 6px;
   background-color: var(--color-violet);
   height: var(--header-height);
-  z-index: 100;
+  z-index: 9999999;
 }
 .header__inner {
   display: flex;
