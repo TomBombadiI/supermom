@@ -1,0 +1,54 @@
+@use "../helpers" as *;
+
+.successes {
+    &__subtitle {
+        text-align: center;
+
+        @include mobile-s-above {
+            margin-top: -25px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 100px 30px;
+        padding-top: 1rem;
+
+        @include laptop-s-above {
+            &--top {
+                padding-top: 80px;
+            }
+        }
+
+        @include mobile {
+            row-gap: 50px;
+        }
+    }
+
+    &__item {
+        max-width: 360px;
+
+        @include laptop-s-above {
+            &--down {
+                transform: translateY(50px);
+            }
+
+            &--top {
+                transform: translateY(-50px);
+            }
+        }
+
+        @include mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin-inline: auto;
+        margin-top: 2rem;
+    }
+}

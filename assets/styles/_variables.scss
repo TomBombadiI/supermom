@@ -1,0 +1,77 @@
+@use "helpers" as *;
+
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-black-2: #212529;
+    --color-accent: #ffa705;
+    --color-accent-2: #ff7b05;
+    --color-accent-pink: #de5bd5;
+
+    --color-violet: #9265ce;
+    --color-violet-darker: #533281;
+
+    --color-bg-yellow: #f2e966;
+    --color-bg-green: #00a684;
+    --color-bg-green-lighter: #5bde8d;
+    --color-bg-blue: #00c5c2;
+    --color-bg-blue-darker: #6974fd;
+    --color-bg-orange: #f7832a;
+    --color-bg-orange-darker: #a04b00;
+    --color-bg-red: #de5b5d;
+
+    --color-gray: #808080;
+
+    --color-gradient-pink: #cb4ee8;
+    --color-gradient-orange: #ff7000;
+    --color-gradient-yellow: #fce700;
+
+    --button-hover-bg: #ff4806;
+    --color-button: #fdefc7;
+    --button-shadow: inset 0px -10px 20px rgb(255 0 0 / 46%), inset 0 10px 10px rgb(255 255 255 / 52%),
+        0 20px 20px rgb(0 0 0 / 20%), 0 0 0 5px rgb(255 255 255 / 15%), inset -1px 16px 10px rgb(255 197 141);
+    --dialog-shadow: 0 0 20px var(--color-violet);
+    --dialog-bg-alt: #eee6f3;
+
+    --card-shadow: 3px 5px 11px 0px rgba(0, 0, 0, 0.33);
+
+    --input-bg: #ffffff66;
+
+    --table-shadow: 3px 5px 11px 0px rgba(0, 0, 0, 0.33);
+    --table-row-odd-bg: #f8f6ff;
+
+    --gradient: linear-gradient(
+        0.37turn,
+        var(--color-gradient-pink),
+        var(--color-gradient-orange),
+        var(--color-gradient-yellow)
+    );
+
+    --gradient-green: linear-gradient(0deg, #00a684 62%, #9265ce 14%);
+    --gradient-pink: linear-gradient(0deg, #de5bd5 62%, #9265ce 14%);
+    --gradient-lightgreen: linear-gradient(0deg, #5bde8d 62%, #9265ce 14%);
+    --gradient-orange: linear-gradient(0deg, #f7832a 62%, #9265ce 14%);
+    --gradient-red: linear-gradient(0deg, #de5b5d 62%, #9265ce 14%);
+
+    --border: var(--border-width-s) solid var(--color-accent-2);
+
+    --border-width-s: 1px;
+
+    --border-radius-m: 5px;
+    --border-radius-l: 16px;
+    --border-radius-xl: 20px;
+    --border-radius-xxl: 30px;
+    --border-radius-xxxl: 100px;
+
+    --font-family-base: "Nunito", sans-serif;
+
+    --container-width: 1140px;
+    --container-padding-x: 16px;
+
+    --header-height: #{fluid(74, 60)};
+
+    --section-padding-y: #{fluid(60, 30)};
+
+    --transition-duration: 0.2s;
+    --transition-duration-longer: 0.4s;
+}

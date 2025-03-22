@@ -1,0 +1,18 @@
+@use "../helpers" as *;
+
+.price {
+    &__inner {
+        display: grid;
+        row-gap: 1.5rem;
+    }
+
+    &__button {
+        margin-inline: auto;
+    }
+
+    &__file {
+        text-align: center;
+        margin-inline: auto;
+        font-weight: 800;
+    }
+}

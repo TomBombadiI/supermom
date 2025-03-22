@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SuperMom</title>
+
+		<link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
+		<link rel="stylesheet" href="./assets/libs/swiper/swiper.css">
+		<link rel="stylesheet" href="./assets/styles/main.css">
+	</head>
+
+	<body>
+
+		<header class="header">
+			<div class="header__inner container">
+				<a href="./" class="header__logo-link">
+					<img width="80" height="62" class="header__logo-image" src="./assets/images/logo.png"
+						 alt="SuperMom Logo">
+				</a>
+				<dialog class="header__overlay js-overlay">
+					<nav class="header__menu">
+						<ul class="header__menu-list">
+							<li class="header__menu-item">
+								<a href="./" class="header__menu-link is-active">SuperMom</a>
+							</li>
+							<li class="header__menu-item toggle-container">
+								<span class="header__menu-link">
+									<a class="header__menu-link" href="#">SuperCamp</a>
+									<button type="button" class="header__menu-button toggle-button">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+											 width="24px" fill="currentColor">
+											<path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+										</svg>
+									</button>
+								</span>
+								<ul class="header__menu-sublist toggle-target">
+									<li class="header__menu-item">
+										<a href="#" class="header__menu-link">
+											Выездной
+										</a>
+									</li>
+									<li class="header__menu-item">
+										<a href="#" class="header__menu-link">
+											Городской
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__menu-item toggle-container">
+								<span class="header__menu-link">
+									<a class="header__menu-link" href="./o-nas.html">О нас</a>
+									<button type="button" class="header__menu-button toggle-button">
+										<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+											 width="24px" fill="currentColor">
+											<path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+										</svg>
+									</button>
+								</span>
+								<ul class="header__menu-sublist toggle-target">
+									<li class="header__menu-item">
+										<a href="./poleznaya-informatsiya.html" class="header__menu-link">
+											Полезная информация
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="header__menu-item">
+								<a href="./detyam.html" class="header__menu-link">Детям</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="./raspisanie.html" class="header__menu-link">Расписание</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="./new-year.html" class="header__menu-link">Новый год</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="./shkol-nikam.html" class="header__menu-link">Школьникам</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="./online.html" class="header__menu-link">Онлайн</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="./kontakty.html" class="header__menu-link">Контакты</a>
+							</li>
+							<li class="header__menu-item">
+								<a href="#" class="header__menu-link">Франшиза</a>
+							</li>
+						</ul>
+						<img class="header__menu-image visible-tablet" src="./assets/images/header-menu-image.png"
+							 width="176" height="160" />
+						<a href="tel:" class="button visible-tablet">
+							Позвонить
+						</a>
+					</nav>
+				</dialog>
+				<button type="button" class="header__burger-button burger-button visible-tablet js-burger-button"
+						aria-label="Открыть меню" title="Открыть меню">
+					<svg class="burger-button__svg" width="44" height="44" viewbox="0 0 100 100">
+						<path class="burger-button__line burger-button__line--1"
+							  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+						<path class="burger-button__line burger-button__line--2" d="M 20,50 H 80" />
+						<path class="burger-button__line burger-button__line--3"
+							  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+						</path>
+					</svg>
+				</button>
+			</div>
+		</header>
+
+		<main class="contents">
+
+			<section class="hero section">
+				<div class="hero__inner container">
+					<div class="hero__body">
+						<div class="hero__title-wrapper">
+							<div class="hero__subtitle h3">
+								АНГЛИЙСКИЙ С ПОЛЬЗОЙ ДЛЯ РАЗВИТИЯ
+							</div>
+							<h1 class="hero__title h2">
+								ОБУЧАЕМ АНГЛИЙСКОМУ ДЕТЕЙ ОТ 1 ГОДА И ВЗРОСЛЫХ
+							</h1>
+							<button type="button" class="hero__button-try button">
+								Пробное занятие
+							</button>
+						</div>
+						<div class="hero__image-wrapper">
+							<img class="hero__image" width="555" height="506" src="./assets/images/hero.png" alt="">
+						</div>
+					</div>
+					<a href="./raspisanie.html" class="hero__order button button--rect">
+						Записаться онлайн
+					</a>
+				</div>
+			</section>
+
+			<section class="why section">
+				<div class="why__inner container">
+					<div class="why__body">
+						<div class="why__content">
+							<h2 class="why__title">
+								Почему Супермама?
+							</h2>
+							<div class="why__text">
+								<ul>
+									<li>Центр SuperMom вошел в топ-10 детских центров Екатеринбурга Премии E1 в 2022
+									</li>
+									<li>SuperMom - это первый и единственный в нашем городе ЛИЦЕНЗИРОВАННЫЙ
+										билингвальный
+										центр, который обучает детей английскому с самого раннего возраста путём
+										погружения
+										в англоязычную среду.</li>
+									<li>На наших занятиях дети занимаются обычными делами: играют, поют, танцуют, рисуют
+										-
+										только делают все это НА АНГЛИЙСКОМ.</li>
+									<li>Погружаясь в англоязычную среду, дети усваивают язык, как родной. Без заучивания
+										и
+										зазубривания!</li>
+								</ul>
+							</div>
+						</div>
+						<div class="why__image-wrapper">
+							<img width="320" height="426" class="why__image" src="./assets/images/question.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="about section">
+				<svg class="about__decor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 84.94"
+					 preserveaspectratio="none">
+					<path fill="currentColor"
+						  d="M0,0V72.94c14.46,5.89,32.38,10.5,54.52.26,110.25-51,120.51,23.71,192.6-4.3,144.73-56.23,154.37,49.44,246.71,4.64C637,4.05,622.19,124.16,757.29,66.21c93-39.91,108.38,54.92,242.71-8.25V0Z"
+						  style="fill-rule:evenodd;opacity:0.33"></path>
+					<path fill="currentColor"
+						  d="M0,0V52.83c131.11,59.9,147-32.91,239.24,6.65,135.09,58,120.24-62.16,263.46,7.34,92.33,44.8,102-60.88,246.71-4.64,72.1,28,82.35-46.71,192.6,4.3,23.95,11.08,43,4.78,58-1.72V0Z"
+						  style="fill-rule:evenodd;opacity:0.66"></path>
+					<path fill="currentColor"
+						  d="M0,0V24.26c15.6,6.95,35.77,15.41,61.78,3.38,110.25-51,120.51,23.71,192.6-4.3C399.11-32.89,408.75,72.79,501.08,28,644.3-41.51,629.45,78.6,764.54,20.65,855.87-18.53,872.34,72.12,1000,15.7V0Z"
+						  style="fill-rule:evenodd"></path>
+				</svg>
+				<div class="about__inner">
+					<div class="container">
+						<h2 class="about__title h1 section-title">
+							О НАС
+						</h2>
+						<div class="about__body">
+							<div class="about__image-wrapper">
+								<img class="about__image" src="./assets/images/tv.png" width="250" alt="">
+								<button title="Включить видео" aria-label="Включить видео" type="button"
+										class="about__play-button button button--icon">
+									<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" width="21px"
+										 height="21px">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+							<div class="about__content">
+								<h3 class="about__content-title h2">
+									Развиваем ребенка
+								</h3>
+								<div class="about__content-text">
+									Наши занятия гармонично развивают оба полушария мозга ребенка, помогают ему
+									простроить
+									новые нейронные связи.
+									<br><br>
+									Каждому - по интересам !
+									Мы славимся уникальными дисциплинами на английском – каждый ребенок найдет свое
+									любимое
+									занятие и влюбится в английский с нами!
+								</div>
+							</div>
+							<img class="about__body-decor scroll-translate" src="./assets/images/megafone.png"
+								 width="214" height="214" alt="">
+							<img class="about__body-decor scroll-translate" src="./assets/images/megafone.png"
+								 width="214" height="214" alt="">
+						</div>
+					</div>
+				</div>
+				<svg class="about__decor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 84.94"
+					 preserveaspectratio="none">
+					<path fill="currentColor"
+						  d="M0,0V72.94c14.46,5.89,32.38,10.5,54.52.26,110.25-51,120.51,23.71,192.6-4.3,144.73-56.23,154.37,49.44,246.71,4.64C637,4.05,622.19,124.16,757.29,66.21c93-39.91,108.38,54.92,242.71-8.25V0Z"
+						  style="fill-rule:evenodd;opacity:0.33"></path>
+					<path fill="currentColor"
+						  d="M0,0V52.83c131.11,59.9,147-32.91,239.24,6.65,135.09,58,120.24-62.16,263.46,7.34,92.33,44.8,102-60.88,246.71-4.64,72.1,28,82.35-46.71,192.6,4.3,23.95,11.08,43,4.78,58-1.72V0Z"
+						  style="fill-rule:evenodd;opacity:0.66"></path>
+					<path fill="currentColor"
+						  d="M0,0V24.26c15.6,6.95,35.77,15.41,61.78,3.38,110.25-51,120.51,23.71,192.6-4.3C399.11-32.89,408.75,72.79,501.08,28,644.3-41.51,629.45,78.6,764.54,20.65,855.87-18.53,872.34,72.12,1000,15.7V0Z"
+						  style="fill-rule:evenodd"></path>
+				</svg>
+			</section>
+
+			<section class="courses section">
+				<div class="courses__inner container">
+					<h2 class="courses__title h1 section-title">
+						КУРСЫ ONLINE
+					</h2>
+					<ul class="courses__list">
+						<li class="courses__card courses__card--violet">
+							<div class="courses__card-tarifs">
+								<div class="courses__card-age h2">
+									Для детей от 3 до 7 лет
+								</div>
+								<ul class="courses__card-tarifs-list">
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/1.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"STARTER"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/2.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"CREATIVE"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/3.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"VIP"</span>
+									</li>
+								</ul>
+							</div>
+							<div class="courses__card-body">
+								<h3 class="courses__card-title h2">
+									"Supermom Online клуб"
+								</h3>
+								<div class="courses__card-description h4">
+									Естественная английская среда у Вас дома.<br>
+									Онлайн программа для детей от 3 до 7 лет.
+								</div>
+								<div class="courses__card-buttons">
+									<button type="button" class="courses__card-button button">
+										Оставить заявку
+									</button>
+									<a href="#" class="courses__card-link button button--flat">
+										О курсе
+									</a>
+								</div>
+							</div>
+							<img width="900" height="900" src="./assets/images/course-card-bg.png" alt=""
+								 class="courses__card-image">
+						</li>
+						<li class="courses__card courses__card--blue">
+							<div class="courses__card-tarifs">
+								<div class="courses__card-age h2">
+									Для детей от 1 до 7 лет
+								</div>
+								<ul class="courses__card-tarifs-list">
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/1.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"ЭКОНОМ"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/2.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"СУПЕР"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/3.png">
+										<span class="courses__card-tarifs-label">ТАРИФ
+											<br>"ПРЕМИУМ"</span>
+									</li>
+								</ul>
+							</div>
+							<div class="courses__card-body">
+								<h3 class="courses__card-title h2">
+									"Supermom for Baby"
+								</h3>
+								<div class="courses__card-description h4">
+									Всестороннее развитие на английском языке для малышей от 1 до 7 лет. Очный формат
+									занятий.
+								</div>
+								<div class="courses__card-buttons">
+									<button type="button" class="courses__card-button button">
+										Оставить заявку
+									</button>
+									<a href="#" class="courses__card-link button button--flat">
+										О курсе
+									</a>
+								</div>
+							</div>
+							<img width="900" height="900" src="./assets/images/course-card-bg.png" alt=""
+								 class="courses__card-image">
+						</li>
+						<li class="courses__card courses__card--orange">
+							<div class="courses__card-tarifs">
+								<div class="courses__card-age h2">
+									Для детей от 7 до 18 лет
+								</div>
+								<ul class="courses__card-tarifs-list">
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/1.png">
+										<span class="courses__card-tarifs-label">КУРС
+											<br>"Детям от 8 до 10 лет"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/2.png">
+										<span class="courses__card-tarifs-label">КУРС
+											<br>"Детям от 10 до 14 лет"</span>
+									</li>
+									<li class="courses__card-tarifs-item h5">
+										<img width="128" height="143" class="courses__card-tarifs-icon"
+											 src="./assets/images/tarifs/3.png">
+										<span class="courses__card-tarifs-label">КУРС
+											<br>"Детям от 14 до 18 лет"</span>
+									</li>
+								</ul>
+							</div>
+							<div class="courses__card-body">
+								<h3 class="courses__card-title h2">
+									"Supermom for Schoolkids"
+								</h3>
+								<div class="courses__card-description h4">
+									Разговорный английский и индивидуальная
+									программа для детей от 7 до 18 лет.
+								</div>
+								<div class="courses__card-buttons">
+									<button type="button" class="courses__card-button button">
+										Оставить заявку
+									</button>
+									<a href="#" class="courses__card-link button button--flat">
+										О курсе
+									</a>
+								</div>
+							</div>
+							<img width="900" height="900" src="./assets/images/course-card-bg.png" alt=""
+								 class="courses__card-image">
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="successes section">
+				<div class="successes__inner container">
+					<h2 class="successes__title h1 section-title">
+						успехи
+					</h2>
+					<ul class="successes__list">
+						<li class="successes__item gradient-card">
+							<h3 class="gradient-card__title h2">
+								Виктория
+							</h3>
+							<div class="gradient-card__image-wrapper">
+								<img src="./assets/images/successes/1.webp" width="320" height="320" alt=""
+									 class="gradient-card__image">
+							</div>
+							<div class="gradient-card__label">
+								6 лет
+							</div>
+							<div class="gradient-card__description">
+								Умеет выстраивать предложения и правильно употреблять артикли.
+							</div>
+							<div class="gradient-card__button button button--icon button--icon-small">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+									 viewbox="0 0 384 512">
+									<path fill="currentColor"
+										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+								</svg>
+							</div>
+						</li>
+						<li class="successes__item successes__item--down gradient-card gradient-card--pink">
+							<h3 class="gradient-card__title h2">
+								Аврора
+							</h3>
+							<div class="gradient-card__image-wrapper">
+								<img src="./assets/images/successes/2.webp" width="320" height="320" alt=""
+									 class="gradient-card__image">
+							</div>
+							<div class="gradient-card__label">
+								4 года
+							</div>
+							<div class="gradient-card__description">
+								Самостоятельно читает книги на английском языке.
+							</div>
+							<div class="gradient-card__button button button--icon button--icon-small">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+									 viewBox="0 0 384 512">
+									<path fill="currentColor"
+										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+								</svg>
+							</div>
+						</li>
+						<li class="successes__item gradient-card gradient-card--lightgreen">
+							<h3 class="gradient-card__title h2">
+								Полина
+							</h3>
+							<div class="gradient-card__image-wrapper">
+								<img src="./assets/images/successes/1.webp" width="320" height="320" alt=""
+									 class="gradient-card__image">
+							</div>
+							<div class="gradient-card__label">
+								6 лет
+							</div>
+							<div class="gradient-card__description">
+								Заняла 2 место на олимпиаде по английскому для дошкольников.
+							</div>
+							<div class="gradient-card__button button button--icon button--icon-small">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+									 viewBox="0 0 384 512">
+									<path fill="currentColor"
+										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+								</svg>
+							</div>
+						</li>
+						<li class="successes__item gradient-card gradient-card--orange">
+							<h3 class="gradient-card__title h2">
+								Дарья
+							</h3>
+							<div class="gradient-card__image-wrapper">
+								<img src="./assets/images/successes/1.webp" width="320" height="320" alt=""
+									 class="gradient-card__image">
+							</div>
+							<div class="gradient-card__label">
+								5 лет
+							</div>
+							<div class="gradient-card__description">
+								Может с легкостью общаться на простые темы.
+							</div>
+							<div class="gradient-card__button button button--icon button--icon-small">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+									 viewBox="0 0 384 512">
+									<path fill="currentColor"
+										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+								</svg>
+							</div>
+						</li>
+						<li class="successes__item gradient-card gradient-card--red">
+							<h3 class="gradient-card__title h2">
+								Максим
+							</h3>
+							<div class="gradient-card__image-wrapper">
+								<img src="./assets/images/successes/1.webp" width="320" height="320" alt=""
+									 class="gradient-card__image">
+							</div>
+							<div class="gradient-card__label">
+								2,5 года
+							</div>
+							<div class="gradient-card__description">
+								Понимает английскую речь в рамках простых предложений, поет песни на английском.
+							</div>
+							<div class="gradient-card__button button button--icon button--icon-small">
+								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+									 viewBox="0 0 384 512">
+									<path fill="currentColor"
+										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+								</svg>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="values section">
+				<div class="values__inner container">
+					<h2 class="values__title h1 section-title">
+						БИЛИНГВАЛЬНЫЙ ЦЕНТР В ЦИФРАХ
+					</h2>
+					<ul class="values__list">
+						<li class="values__item">
+							<div class="values__item-image-wrapper">
+								<span class="visually-hidden">912</span>
+								<img width="677" height="380" src="./assets/images/values/912.png" alt=""
+									 class="values__item-image">
+							</div>
+							<div class="values__item-title h2">
+								часов
+							</div>
+							<div class="values__item-description">
+								Английского по программе SuperMom каждый месяц
+							</div>
+						</li>
+						<li class="values__item values__item--top">
+							<div class="values__item-image-wrapper">
+								<span class="visually-hidden">10</span>
+								<img width="677" height="380" src="./assets/images/values/10.png" alt=""
+									 class="values__item-image values__item-image--long-duration">
+							</div>
+							<div class="values__item-title h2">
+								стран
+							</div>
+							<div class="values__item-description">
+								Где получали образование
+								и работали сотрудники SuperMom
+							</div>
+						</li>
+						<li class="values__item">
+							<div class="values__item-image-wrapper">
+								<span class="visually-hidden">133</span>
+								<img width="677" height="380" src="./assets/images/values/133.png" alt=""
+									 class="values__item-image values__item-image--medium-duration">
+							</div>
+							<div class="values__item-title h2">
+								года
+							</div>
+							<div class="values__item-description">
+								Общий стаж сотрудников
+								SuperMom в сфере лингвистики
+								и педагогики
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="media-about section">
+				<div class="media-about__inner container">
+					<h2 class="media-about__title h1 section-title">
+						В СМИ О НАС
+					</h2>
+					<ul class="media-about__list">
+						<li class="media-abou__list-item video-card">
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/media-about/r1.png" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="media-abou__list-item video-card">
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/media-about/4.jpg" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="media-abou__list-item video-card">
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/media-about/r1.png" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="reviews section">
+				<div class="reviews__inner container">
+					<h2 class="reviews__title h1 section-title">
+						отзывы супермам
+					</h2>
+					<ul class="reviews__list">
+						<li class="reviews__list-item video-card video-card--violet">
+							<h3 class="video-card__title h2">
+								Ксения
+							</h3>
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/reviews/1.png" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="reviews__list-item video-card video-card--yellow">
+							<h3 class="video-card__title h2">
+								Дина
+							</h3>
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/reviews/2.png" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+						<li class="reviews__list-item video-card video-card--blue">
+							<h3 class="video-card__title h2">
+								Оксана
+							</h3>
+							<div class="video-card__preview-wrapper">
+								<img src="./assets/images/reviews/3.png" width="320" height="320" alt=""
+									 class="video-card__preview">
+								<button class="video-card__preview-button button button--icon button--icon-small">
+									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
+										 viewBox="0 0 384 512">
+										<path fill="currentColor"
+											  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+									</svg>
+								</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__inner container">
+				<div class="footer__map-wrapper">
+					<h2 class="footer__title section-title h1">
+						МЫ НАХОДИМСЯ
+					</h2>
+					<div class="footer__address">
+						г. Екатеринбург, ул. Луначарского, 171
+					</div>
+					<div class="footer__map">
+						<iframe src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3Ad2a6e2bfd6b402915c9951448194c97b3e966dc89edbe31652d68b483e7414a6&amp;source=constructor"
+								width="100%" height="400" frameborder="0"></iframe>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__contacts">
+						<a href="./" class="footer__contacts-home-link">
+							<img class="footer__contacts-image" src="./assets/images/header-menu-image.png" width="191"
+								 height="174">
+						</a>
+						<strong>
+							<a class="footer__contacts-link" href="tel:79530055575">+7 953 00 555 75</a>
+						</strong>
+						<strong>
+							<a class="footer__contacts-link" href="mailto:info@supermomekb.ru">info@supermomekb.ru</a>
+						</strong>
+						<p>
+							г. Екатеринбург, ул. Луначарского, 171
+						</p>
+					</div>
+					<nav class="footer__menu">
+						<div class="footer__menu-list">
+							<a href="#" class="footer__menu-link button">
+								Online-клуб
+							</a>
+							<a href="./shkol-nikam.html" class="footer__menu-link button">
+								Школьникам
+							</a>
+							<a href="#" class="footer__menu-link button">
+								Взрослым
+							</a>
+							<a href="./kontakty.html" class="footer__menu-link button">
+								Контакты
+							</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="footer__camp">
+				<a title="Наш лагерь на портале лагерей" aria-label="Наш лагерь на портале лагерей"
+				   href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+					<img width="50" height="50" src="./assets/images/camp-logo.jpeg" alt="" class="footer__camp-logo">
+				</a>
+				<a href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+					Наш лагерь на
+					<br>
+					портале лагерей
+				</a>
+			</div>
+
+		</footer>
+
+		<script type="text/javascript"
+				src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
+				async=""></script>
+		<script src="./assets/libs/swiper/swiper.js"></script>
+		<script type="module" src="./assets/scripts/main.js"></script>
+	</body>
+
+</html>

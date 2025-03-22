@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SuperMom</title>
+
+        <link rel="stylesheet" href="./assets/libs/swiper/swiper.css">
+        <link rel="stylesheet" href="./assets/styles/main.css">
+    </head>
+
+    <body
+          style="background-image: url('./assets/images/new-year-bg.jpg'); background-position: center; background-size: cover;">
+
+        <header class="header">
+            <div class="header__inner container">
+                <a href="./" class="header__logo-link">
+                    <img width="80" height="62" class="header__logo-image" src="./assets/images/logo.png"
+                         alt="SuperMom Logo">
+                </a>
+                <dialog class="header__overlay js-overlay">
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="./" class="header__menu-link is-active">SuperMom</a>
+                            </li>
+                            <li class="header__menu-item toggle-container">
+                                <span class="header__menu-link">
+                                    <a class="header__menu-link" href="#">SuperCamp</a>
+                                    <button type="button" class="header__menu-button toggle-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+                                             width="24px" fill="currentColor">
+                                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                <ul class="header__menu-sublist toggle-target">
+                                    <li class="header__menu-item">
+                                        <a href="#" class="header__menu-link">
+                                            Выездной
+                                        </a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="#" class="header__menu-link">
+                                            Городской
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item toggle-container">
+                                <span class="header__menu-link">
+                                    <a class="header__menu-link" href="./o-nas.html">О нас</a>
+                                    <button type="button" class="header__menu-button toggle-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+                                             width="24px" fill="currentColor">
+                                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                <ul class="header__menu-sublist toggle-target">
+                                    <li class="header__menu-item">
+                                        <a href="./poleznaya-informatsiya.html" class="header__menu-link">
+                                            Полезная информация
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./detyam.html" class="header__menu-link">Детям</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./raspisanie.html" class="header__menu-link">Расписание</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./new-year.html" class="header__menu-link">Новый год</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./shkol-nikam.html" class="header__menu-link">Школьникам</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./online.html" class="header__menu-link">Онлайн</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./kontakty.html" class="header__menu-link">Контакты</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">Франшиза</a>
+                            </li>
+                        </ul>
+                        <img class="header__menu-image visible-tablet" src="./assets/images/header-menu-image.png"
+                             width="176" height="160" />
+                        <a href="tel:" class="button visible-tablet">
+                            Позвонить
+                        </a>
+                    </nav>
+                </dialog>
+                <button type="button" class="header__burger-button burger-button visible-tablet js-burger-button"
+                        aria-label="Открыть меню" title="Открыть меню">
+                    <svg class="burger-button__svg" width="44" height="44" viewbox="0 0 100 100">
+                        <path class="burger-button__line burger-button__line--1"
+                              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80" />
+                        <path class="burger-button__line burger-button__line--3"
+                              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="contents">
+
+            <section class="new-year section">
+                <div class="new-year__inner container">
+                    <h1 class="new-year__title h2">
+                        Соверши путешествие в волшебный мир Нового года вместе с Supermom
+                    </h1>
+                    <div class="new-year__subtitle h3">
+                        Открой для себя мир английского языка вместе с Санта Клаусом и нашими героями
+                    </div>
+                    <ul class="new-year__posters">
+                        <li class="new-year__poster">
+                            <div class="new-year__poster-image-wrapper">
+                                <img src="./assets/images/new-year/1.jpg" width="630" height="886" alt=""
+                                     class="new-year__poster-image">
+                            </div>
+                            <div class="new-year__poster-body">
+                                <div class="new-year__poster-content raw-content">
+                                    <h4 style="font-weight: bold;margin-bottom: 25px;">
+                                        <span style="color: rgb(255, 255, 255);">
+                                            Новый год в стиле Disney
+                                        </span>
+                                        <br>
+                                    </h4>
+                                    <p style="font-weight: bold;">
+                                        <span style="color: rgb(255, 255, 255);">
+                                            Новогодняя елка на английском языке в нашем центре Supermom<br>
+                                            Возраст 2+<br><br>
+                                            В программе:
+                                        </span>
+                                    </p>
+                                    <ul style="color: rgb(255, 255, 255); font-weight: bold;">
+                                        <li>⁠новогодние квесты про Disney</li>
+                                        <li>⁠снежные поделки</li>
+                                        <li>⁠праздничные танцы</li>
+                                        <li>⁠конкурс на лучший новогодний костюм в стиле Disney</li>
+                                        <li>⁠сладкие угощения</li>
+                                        <li>⁠подарки от Санта Клауса из жарких стран</li>
+                                        <li>⁠яркие фотографии около нашей елочки Disney</li>
+                                    </ul>
+                                    <span style="color: rgb(255, 255, 255);font-weight: bold;">
+                                        Билеты на наше новогоднее
+                                        представление можно приобрести у администратора в центре
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255);">Место проведения:</span>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255);">🏠 Екатеринбург, Луначарского, 171
+                                    </span>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255);">🏠 Билингвальный центр SUPERMOM
+                                    </span>
+                                    <br>
+                                    <p>&nbsp;</p>
+                                    <span style="color: rgb(255, 255, 255);">Время проведения:</span>
+                                    <br>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255);">⏰ 14 декабря в 16 часов </span>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255);">⏰ продолжительность 90 минут
+                                    </span>
+                                    <br>
+                                    <br>
+                                    <span style="color: rgb(255, 255, 255); font-weight: bold;">
+                                        📲 8-953-00-555-75
+                                    </span>
+                                    <br>
+                                    <p>&nbsp;</p>
+                                    <br>
+                                    <br>
+                                </div>
+                                <button type="button" class="new-year__button button">
+                                    Записаться
+                                </button>
+                            </div>
+                        </li>
+                        <li class="new-year__poster">
+                            <div class="new-year__poster-image-wrapper">
+                                <img src="./assets/images/new-year/2.jpg" width="630" height="886" alt=""
+                                     class="new-year__poster-image">
+                            </div>
+                            <div class="new-year__poster-body raw-content">
+                                <div class="new-year__poster-content raw-content">
+                                    <h4 style="font-weight: bold;margin-bottom: 25px;"><span
+                                              style="color: rgb(255, 255, 255);">
+                                            Новогодняя вечеринка NEW YEAR'S INSIDE OUT</span><br></h4>
+                                    <p style="font-weight: bold;"><span style="color: rgb(255, 255, 255);">
+                                            Вечеринка на английском языке в стиле мультфильма Головоломка <br>
+                                            Возраст 4+<br>
+                                            Соверши новогоднее приключение в мир эмоций с Supermom
+                                            <br><br>
+                                            В программе:</span>
+                                    </p>
+                                    <ul style="color: rgb(255, 255, 255); font-weight: bold;">
+                                        <li>душевное шоу in English</li>
+                                        <li>cчастливая фотобудка для самых крутых фотоснимков</li>
+                                        <li>сладкая вата от грусти</li>
+                                        <li>эмоциональные квесты и задания</li>
+                                        <li>красочная дискотека</li>
+                                        <li>новогодние подарки от Санта Клауса </li>
+                                        <li>веселый Санта Клаус с гитарой и песнями</li>
+                                        <li>носитель языка</li>
+                                    </ul>
+                                    <span style="color: rgb(255, 255, 255);font-weight: bold;">Пора одеть свои лучшие
+                                        наряды и отправиться на самую веселую, громкую, эмоциональную новогоднюю
+                                        вечеринку
+                                    </span>
+                                    <p>&nbsp;</p>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;Место проведения:</span><br>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;🏠 Екатеринбург, ул. Хохрякова,
+                                        48</span><br>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;🏠 ресторан «Буду еще» </span><br>
+                                    <p>&nbsp;</p>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;Время проведения:</span><br>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;⏰ 21 декабря в 17 часов </span><br>
+                                    <span style="color: rgb(255, 255, 255);">&nbsp;⏰ продолжительность 120 минут
+                                    </span><br>
+                                    <br><span style="color: rgb(255, 255, 255); font-weight: bold;">&nbsp;📲
+                                        8-953-00-555-75</span><br>
+                                    <p></p>
+                                </div>
+                                <button type="button" class="new-year__button button">
+                                    Записаться
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="new-year__call h3">
+                        Не упустите возможность сделать этот Новый год по-настоящему волшебным! Мы ждем вас! 🎄🎅🏻
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner container">
+                <div class="footer__map-wrapper">
+                    <h2 class="footer__title section-title h1">
+                        МЫ НАХОДИМСЯ
+                    </h2>
+                    <div class="footer__address">
+                        г. Екатеринбург, ул. Луначарского, 171
+                    </div>
+                    <div class="footer__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3Ad2a6e2bfd6b402915c9951448194c97b3e966dc89edbe31652d68b483e7414a6&amp;source=constructor"
+                                width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__contacts">
+                        <a href="./" class="footer__contacts-home-link">
+                            <img class="footer__contacts-image" src="./assets/images/header-menu-image.png" width="191"
+                                 height="174">
+                        </a>
+                        <strong>
+                            <a class="footer__contacts-link" href="tel:79530055575">+7 953 00 555 75</a>
+                        </strong>
+                        <strong>
+                            <a class="footer__contacts-link" href="mailto:info@supermomekb.ru">info@supermomekb.ru</a>
+                        </strong>
+                        <p>
+                            г. Екатеринбург, ул. Луначарского, 171
+                        </p>
+                    </div>
+                    <nav class="footer__menu">
+                        <div class="footer__menu-list">
+                            <a href="#" class="footer__menu-link button">
+                                Online-клуб
+                            </a>
+                            <a href="./shkol-nikam.html" class="footer__menu-link button">
+                                Школьникам
+                            </a>
+                            <a href="#" class="footer__menu-link button">
+                                Взрослым
+                            </a>
+                            <a href="./kontakty.html" class="footer__menu-link button">
+                                Контакты
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__camp">
+                <a title="Наш лагерь на портале лагерей" aria-label="Наш лагерь на портале лагерей"
+                   href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+                    <img width="50" height="50" src="./assets/images/camp-logo.jpeg" alt="" class="footer__camp-logo">
+                </a>
+                <a href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+                    Наш лагерь на
+                    <br>
+                    портале лагерей
+                </a>
+            </div>
+
+        </footer>
+
+        <script type="text/javascript"
+                src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
+                async=""></script>
+
+        <script src="./assets/libs/swiper/swiper.js"></script>
+        <script type="module" src="./assets/scripts/main.js"></script>
+    </body>
+
+</html>

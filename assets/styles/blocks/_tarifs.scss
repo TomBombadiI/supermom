@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.tarifs {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        padding-bottom: 50px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        &-item {
+            @include tablet-above {
+                &--down {
+                    transform: translateY(50px);
+                }
+            }
+        }
+    }
+
+    &__info {
+        text-align: center;
+        font-size: 24px;
+        margin-top: fluid(16, 0);
+    }
+}

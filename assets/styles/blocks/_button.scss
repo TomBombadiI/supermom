@@ -1,0 +1,77 @@
+@use "../helpers" as *;
+
+.button {
+    --borderRadius: var(--border-radius-xxxl);
+
+    @include flex-center(true);
+
+    padding: 15px 20px;
+    background-color: var(--color-accent-2);
+    color: var(--color-white);
+    font-size: fluid(24, 20);
+    border-radius: var(--borderRadius);
+    border: none;
+    box-shadow: var(--button-shadow);
+    user-select: none;
+    cursor: pointer;
+
+    @include hover {
+        background-color: var(--button-hover-bg);
+        color: var(--color-white);
+    }
+
+    &:active {
+        scale: 0.99;
+    }
+
+    &--rect {
+        border-radius: 0;
+    }
+
+    &--icon {
+        @include square(70px);
+
+        padding: 0;
+        border-radius: 50%;
+
+        &-small {
+            @include square(50px);
+        }
+    }
+
+    &--flat {
+        background-color: var(--color-white);
+        border: var(--border);
+        color: var(--color-accent-2);
+        box-shadow: none;
+
+        @include hover {
+            color: var(--color-white);
+        }
+    }
+
+    &--order {
+        border: var(--border);
+        border-color: var(--color-black-2);
+        background-color: var(--color-violet);
+        box-shadow: none;
+        padding: 8px 16px;
+        border-radius: var(--border-radius-m);
+        font-weight: 700;
+        font-size: 20px;
+
+        @include hover {
+            background-color: purple;
+        }
+
+        &-white {
+            background-color: var(--color-white);
+            color: var(--color-violet);
+            border-color: var(--color-white);
+
+            @include hover {
+                color: var(--color-white);
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use "../helpers" as *;
+
+.video-card {
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    border-radius: var(--border-radius-xxl);
+    padding: 20px;
+    display: grid;
+    row-gap: 1rem;
+
+    &--violet {
+        background-color: var(--color-violet);
+
+        .video-card__title {
+            color: var(--color-white);
+        }
+    }
+
+    &--yellow {
+        background-color: var(--color-accent);
+
+        .video-card__title {
+            color: var(--color-white);
+        }
+    }
+
+    &--blue {
+        background-color: var(--color-bg-blue);
+
+        .video-card__title {
+            color: var(--color-white);
+        }
+    }
+
+    &__title {
+        color: var(--color-black);
+        text-align: center;
+    }
+
+    &__preview {
+        width: 100%;
+        border-radius: var(--border-radius-xxl);
+    }
+
+    &__preview-wrapper {
+        position: relative;
+    }
+
+    &__preview-button {
+        @include abs-center;
+    }
+}

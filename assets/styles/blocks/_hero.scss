@@ -1,0 +1,63 @@
+@use "../helpers" as *;
+
+.hero {
+    &__inner {
+        display: grid;
+        row-gap: var(--section-padding-y);
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+        line-height: 1.1;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: fluid(40, 16);
+
+        @include mobile {
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        font-weight: 700;
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+
+        &--font-large {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        ul {
+            font-size: inherit;
+            list-style: disc;
+            gap: 2px;
+        }
+    }
+
+    &__image {
+        margin-inline: auto;
+    }
+
+    &__order {
+        margin-top: fluid(16, 6);
+        margin-inline: auto;
+        width: fluid(360, 288);
+    }
+}

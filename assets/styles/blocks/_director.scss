@@ -1,0 +1,46 @@
+@use "../helpers" as *;
+
+.director {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__body {
+        padding: fluid(50, 16);
+        background-color: var(--color-violet);
+        border-radius: var(--border-radius-xxl);
+        box-shadow: var(--card-shadow);
+        
+        @include tablet {
+            order: -1;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__subtitle {
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__image {
+        margin-inline: auto;
+        height: 100%;
+        object-fit: contain;
+    }
+}

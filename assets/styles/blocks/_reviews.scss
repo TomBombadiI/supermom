@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.reviews {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+}

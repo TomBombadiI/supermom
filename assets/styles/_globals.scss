@@ -1,0 +1,124 @@
+@use "helpers" as *;
+
+html {
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: var(--gradient);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size: 18px;
+
+    font-family: var(--font-family-base);
+    color: var(--color-white);
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    color: var(--color-white);
+}
+
+h1,
+.h1 {
+    @include fluid-text(50, 40);
+
+    font-weight: 800;
+}
+
+h2,
+.h2 {
+    @include fluid-text(40, 30);
+
+    font-weight: 900;
+}
+
+h3,
+.h3 {
+    @include fluid-text(30, 24);
+
+    font-weight: 400;
+}
+
+h4,
+.h4 {
+    @include fluid-text(24, 17);
+
+    font-weight: 700;
+}
+
+h5,
+.h5 {
+    @include fluid-text(17, 16);
+
+    font-weight: 900;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    color: inherit;
+
+    @include hover {
+        color: var(--color-black-2);
+    }
+
+    &[class] {
+        text-decoration: none;
+    }
+}
+
+ul:not([class]) {
+    list-style: circle;
+    font-family: "Calibri", sans-serif;
+    font-size: fluid(18, 16);
+    display: grid;
+    gap: 1rem;
+}
+
+:focus-visible {
+    @include focus-visible;
+}
+
+.section {
+    padding-block: var(--section-padding-y);
+}
+
+.section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    overflow-wrap: anywhere;
+    margin-bottom: 1rem;
+}
+
+.scroll-translate {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}

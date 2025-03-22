@@ -1,0 +1,32 @@
+@use "../helpers" as *;
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__header {
+        background-color: var(--color-violet);
+        padding: 16px 20px;
+        border: none;
+    }
+
+    &__row {
+        background-color: var(--color-white);
+        border: none;
+
+        &:nth-child(odd) {
+            background-color: var(--table-row-odd-bg);
+        }
+    }
+
+    &__cell {
+        border: none;
+        color: grey;
+        padding: 16px 20px;
+        font-size: 16px;
+
+        &--text-center {
+            text-align: center;
+        }
+    }
+}

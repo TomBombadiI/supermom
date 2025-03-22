@@ -1,0 +1,27 @@
+@use "../helpers" as *;
+
+.selt {
+    &__inner {
+        display: grid;
+        row-gap: fluid(32, 16);
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+
+        @include mobile-s {
+            font-size: 26px;
+        }
+    }
+
+    &__title {
+        font-size: fluid(70, 50);
+    }
+
+    &__link {
+        margin-inline: auto;
+    }
+}

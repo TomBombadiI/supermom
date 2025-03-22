@@ -1,0 +1,101 @@
+@use "../helpers" as *;
+
+.values {
+    &__title {
+        @include mobile-s {
+            font-size: 28px;
+        }
+    }
+
+    &__list {
+        padding-top: fluid(100, 50);
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            row-gap: fluid(60, 30);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;            
+        }
+    }
+
+    &__item {
+        box-shadow: var(--card-shadow);
+        border-radius: var(--border-radius-xxl);
+        display: grid;
+        justify-content: center;
+        row-gap: 30px;
+        padding: 30px 1rem;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        position: relative;
+        padding-top: 180px;
+
+        @include tablet-above {
+            &--top {
+                transform: translateY(-50px);
+            }
+        }
+
+        &:last-child {
+            @include tablet {
+                grid-column: 1 / -1;
+                margin-inline: auto;
+                max-width: 50%;
+            }
+
+            @include mobile {
+                max-width: 100%;
+            }
+        }
+
+        
+
+        &-title {
+            text-transform: uppercase;
+            color: var(--color-violet);
+            text-align: center;
+        }
+
+        &-description {
+            font-size: 24px;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 180px;
+            object-fit: contain;
+            animation: levitation 3s ease-in-out infinite;
+
+            &--long-duration {
+                animation: levitation 5s ease-in-out infinite;
+            }
+
+            &--medium-duration {
+                animation: levitation 4s ease-in-out infinite;
+            }
+        }
+
+        @keyframes levitation {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-25px);
+            }
+        }
+    }
+}

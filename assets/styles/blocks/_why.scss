@@ -1,0 +1,36 @@
+@use "../helpers" as *;
+
+.why {
+    &__inner {
+        
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: 1rem;
+        padding: 20px fluid(40, 8);
+        background-color: var(--color-violet-darker);
+        border-radius: var(--border-radius-xxl);
+        box-shadow: var(--card-shadow);
+        position: relative;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__image {
+        margin-left: auto;
+        scale: 1.5;
+        translate: -15%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}

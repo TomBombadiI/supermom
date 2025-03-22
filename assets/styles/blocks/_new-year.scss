@@ -1,0 +1,55 @@
+@use "../helpers" as *;
+
+.new-year {
+    &__title {
+        text-align: center;
+    }
+
+    &__subtitle {
+        text-align: center;
+    }
+
+    &__posters {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__poster {
+        border-radius: var(--border-radius-xxl);
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        overflow: hidden;
+        display: grid;
+        background-color: rgba(0, 0, 0, 0.03);
+
+        &-image {
+            width: 100%;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            padding: 1.5rem;
+            padding-top: 0;
+        }
+
+        &-content {
+            flex-grow: 1;
+        }
+    }
+
+    &__button {
+        margin-top: 2rem;
+    }
+
+    &__call {
+        margin-top: 2rem;
+        text-align: center;
+        font-weight: 800;
+    }
+}

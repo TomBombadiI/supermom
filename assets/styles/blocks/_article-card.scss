@@ -1,0 +1,50 @@
+@use "../helpers" as *;
+
+.article-card {
+    border-radius: var(--border-radius-xxl);
+    box-shadow: var(--card-shadow);
+    border: 9px solid var(--color-white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    &--step {
+        background: url('../images/step-bg.jpg') center/cover no-repeat;
+    }
+
+    &__preview {
+        &-image {
+            width: 100%;
+            margin-inline: auto;
+            border-radius: 18px;
+
+            &--circle {
+                max-width: 183px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+        column-gap: .5rem;
+    }
+
+    &__button {
+        align-self: center;
+    }
+
+    &__file {
+        align-self: center;
+        font-weight: 900;
+    }
+}

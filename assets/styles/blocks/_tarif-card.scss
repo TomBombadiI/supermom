@@ -1,0 +1,47 @@
+@use "../helpers" as *;
+
+.tarif-card {
+    background-color: var(--color-bg-blue-darker);
+    border-radius: var(--border-radius-xxl);
+    border: 9px solid var(--color-white);
+    padding: 20px;
+    display: grid;
+    row-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+
+    &--violet {
+        background-color: var(--color-violet);
+    }
+
+    &--green {
+        background-color: var(--color-bg-green);
+    }
+
+    &__body {
+        font-weight: 800;
+
+        ul {
+            text-align: left;
+        }
+    }
+
+    &__price {
+        font-size: fluid(32, 24);
+        font-weight: 800;
+        line-height: 1;
+
+        &--discount {
+            color: var(--color-accent);
+            text-decoration: line-through;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: .5rem;
+        row-gap: 1rem;
+    }
+}

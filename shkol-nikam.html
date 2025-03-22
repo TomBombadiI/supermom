@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SuperMom</title>
+
+        <link rel="stylesheet" href="./assets/libs/swiper/swiper.css">
+        <link rel="stylesheet" href="./assets/styles/main.css">
+    </head>
+
+    <body>
+
+        <header class="header">
+            <div class="header__inner container">
+                <a href="./" class="header__logo-link">
+                    <img width="80" height="62" class="header__logo-image" src="./assets/images/logo.png"
+                         alt="SuperMom Logo">
+                </a>
+                <dialog class="header__overlay js-overlay">
+                    <nav class="header__menu">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="./" class="header__menu-link is-active">SuperMom</a>
+                            </li>
+                            <li class="header__menu-item toggle-container">
+                                <span class="header__menu-link">
+                                    <a class="header__menu-link" href="#">SuperCamp</a>
+                                    <button type="button" class="header__menu-button toggle-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+                                             width="24px" fill="currentColor">
+                                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                <ul class="header__menu-sublist toggle-target">
+                                    <li class="header__menu-item">
+                                        <a href="#" class="header__menu-link">
+                                            Выездной
+                                        </a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a href="#" class="header__menu-link">
+                                            Городской
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item toggle-container">
+                                <span class="header__menu-link">
+                                    <a class="header__menu-link" href="./o-nas.html">О нас</a>
+                                    <button type="button" class="header__menu-button toggle-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewbox="0 -960 960 960"
+                                             width="24px" fill="currentColor">
+                                            <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
+                                        </svg>
+                                    </button>
+                                </span>
+                                <ul class="header__menu-sublist toggle-target">
+                                    <li class="header__menu-item">
+                                        <a href="./poleznaya-informatsiya.html" class="header__menu-link">
+                                            Полезная информация
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./detyam.html" class="header__menu-link">Детям</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./raspisanie.html" class="header__menu-link">Расписание</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./new-year.html" class="header__menu-link">Новый год</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./shkol-nikam.html" class="header__menu-link">Школьникам</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./online.html" class="header__menu-link">Онлайн</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="./kontakty.html" class="header__menu-link">Контакты</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">Франшиза</a>
+                            </li>
+                        </ul>
+                        <img class="header__menu-image visible-tablet" src="./assets/images/header-menu-image.png"
+                             width="176" height="160" />
+                        <a href="tel:" class="button visible-tablet">
+                            Позвонить
+                        </a>
+                    </nav>
+                </dialog>
+                <button type="button" class="header__burger-button burger-button visible-tablet js-burger-button"
+                        aria-label="Открыть меню" title="Открыть меню">
+                    <svg class="burger-button__svg" width="44" height="44" viewbox="0 0 100 100">
+                        <path class="burger-button__line burger-button__line--1"
+                              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="burger-button__line burger-button__line--2" d="M 20,50 H 80" />
+                        <path class="burger-button__line burger-button__line--3"
+                              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main class="contents">
+
+            <section class="hero section">
+                <div class="hero__inner container">
+                    <div class="hero__body">
+                        <div class="hero__title-wrapper">
+                            <h1 class="hero__title h2">
+                                Fun English 8+
+                                Каждое Воскресенье 16.00
+                            </h1>
+                            <div class="hero__description hero__description--font-large">
+                                3 часа in English это:
+                                <ul>
+                                    <li>⁠тренировка разговорных навыков</li>
+                                    <li>⁠super компания сверстников и единомышленников</li>
+                                    <li>⁠музыка, пение и игра на гитаре, наконец то сможешь понять о чем поет твоя
+                                        любимая
+                                        группа</li>
+                                    <li>⁠творческие Мастер - классы</li>
+                                    <li>носители языка</li>
+                                    <li>тренды тик-ток и like</li>
+                                    <li>любой уровень знания языка</li>
+                                    <li>⁠общение с друзьями на английском языке</li>
+                                </ul>
+                            </div>
+                            <button type="button" class="hero__button-try button">
+                                Пробное занятие
+                            </button>
+                        </div>
+                        <div class="hero__image-wrapper">
+                            <img class="hero__image" width="600" height="924" src="./assets/images/fun-english.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hero section">
+                <div class="hero__inner container">
+                    <div class="hero__body">
+                        <div class="hero__title-wrapper">
+                            <h2 class="hero__title h2">
+                                Английский язык для школьников
+                            </h2>
+                            <div class="hero__description hero__description--font-large">
+                                Английский лагерь в каникулы
+                                <br><br>
+                                Обучение с высококвалифицированными педагогами и носителями языка
+                                <br><br>
+                                Подготовка к школьному курсу
+                                <br><br>
+                                Интересная продленка
+                            </div>
+                            <button type="button" class="hero__button-try button">
+                                Пробное занятие
+                            </button>
+                        </div>
+                        <div class="hero__image-wrapper">
+                            <img class="hero__image" width="555" height="506" src="./assets/images/hero.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="successes section">
+                <div class="successes__inner container">
+                    <h2 class="successes__title h1 section-title">
+                        ПОМОГАЕМ ДОСТИЧЬ РЕЗУЛЬТАТА
+                    </h2>
+                    <div class="successes__subtitle h3">
+                        Составляем индивидуальный план занятий под каждого ребенка
+                    </div>
+                    <ul class="successes__list successes__list--top">
+                        <li class="successes__item gradient-card">
+                            <div class="gradient-card__image-wrapper">
+                                <img src="./assets/images/monkey/2.webp" width="320" height="320" alt=""
+                                     class="gradient-card__image">
+                            </div>
+                            <h3 class="gradient-card__title h2">
+                                Разговорный английский язык
+                            </h3>
+                            <div class="gradient-card__description">
+                                Помогаем преодолеть языковой барьер и свободно говорить.
+                            </div>
+                        </li>
+                        <li class="successes__item successes__item--top gradient-card gradient-card--pink">
+                            <div class="gradient-card__image-wrapper">
+                                <img src="./assets/images/monkey/1.webp" width="320" height="320" alt=""
+                                     class="gradient-card__image">
+                            </div>
+                            <h3 class="gradient-card__title h2">
+                                Освоение школьной программы
+                            </h3>
+                            <div class="gradient-card__description">
+                                Помогаем найти пробелы, подтянуть знания и улучшить оценки.
+                            </div>
+                        </li>
+                        <li class="successes__item gradient-card gradient-card--lightgreen">
+                            <div class="gradient-card__image-wrapper">
+                                <img src="./assets/images/monkey/3.webp" width="320" height="320" alt=""
+                                     class="gradient-card__image">
+                            </div>
+                            <h3 class="gradient-card__title h2">
+                                Увеличение словарного запаса
+                            </h3>
+                            <div class="gradient-card__description">
+                                Увеличиваем вокабуляр в тех темах, которые особенно интересны ребенку
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title h1 container">
+                    наши курсы
+                </h2>
+                <div class="section-body">
+                    <div class="courses-slider container">
+                        <div class="courses-slider__swiper swiper">
+                            <div class="courses-slider__swiper swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/1.png" width="351" height="531" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/2.png" width="351" height="531" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/3.png" width="351" height="531" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/1.png" width="351" height="531" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/2.png" width="351" height="531" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./assets/images/courses-slider/3.png" width="351" height="531" alt="">
+                                </div>
+                            </div>
+                            <button class="courses-slider__nav courses-slider__nav--prev button button--icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                                     viewBox="0 -960 960 960" fill="currentColor">
+                                    <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
+                                </svg>
+                            </button>
+                            <button class="courses-slider__nav courses-slider__nav--next button button--icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="30px" width="30px"
+                                     viewBox="0 -960 960 960" fill="currentColor">
+                                    <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                                </svg>
+                            </button>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info section">
+                <div class="container">
+                    <div class="info__inner">
+                        <h2 class="info__title section-title h1">
+                            почему нас выбирают?
+                        </h2>
+                        <div class="info__body h4">
+                            <p>
+                                Можно приступать к обучению с любым уровнем знаний, от начального до продвинутого.
+                                Занятия с настоящими профессионалами своего дела.
+                                <br>
+                                Индивидуальный подход при выборе расписания занятий.
+                                <br>
+                                Подготовка к экзаменам.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="price section">
+                <div class="price__inner container">
+                    <h2 class="price__title h1 section-title">
+                        стоимость обучения
+                    </h2>
+                    <table class="price__table table">
+                        <thead>
+                            <tr>
+                                <th class="table__header" colspan="12">
+                                    ПРАЙС
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table__row">
+                                <td class="table__cell" data-th="ПРАЙС">
+                                    Разовое занятие онлайн 45 мин
+                                </td>
+                                <td class="table__cell table__cell--text-center" data-th="ПРАЙС">
+                                    <strong>900 руб</strong>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell" data-th="ПРАЙС">
+                                    Абонемент на 4 занятия онлайн 45 мин
+                                </td>
+                                <td class="table__cell table__cell--text-center" data-th="ПРАЙС">
+                                    <strong>3400 руб</strong>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell" data-th="ПРАЙС">
+                                    Абонемент на 8 занятия онлайн 45 мин
+                                </td>
+                                <td class="table__cell table__cell--text-center" data-th="ПРАЙС">
+                                    <strong>6400 руб</strong>
+                                </td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell table__cell--text-center" colspan="12" data-th="ПРАЙС">
+                                    Возможны занятия 30, 45, 60
+                                    минут индивидуально или в паре, онлайн или очно. <br>
+                                    Прайс со старшим преподавателем
+                                    и для школьников средних и старших классов отличается.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="price__button button">
+                        Оставить заявку
+                    </button>
+                </div>
+            </section>
+
+            <section class="selt section">
+                <div class="selt__inner container">
+                    <div class="selt__subtitle h1">
+                        Приглашаем всех школьников и взрослых определить свой уровень владения английским,
+                        пройдя экзамен
+                    </div>
+                    <div class="selt__title section-title">
+                        SELT
+                    </div>
+                    <a href="./selt.html" class="selt__link button">
+                        Подробнее
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__inner container">
+                <div class="footer__map-wrapper">
+                    <h2 class="footer__title section-title h1">
+                        МЫ НАХОДИМСЯ
+                    </h2>
+                    <div class="footer__address">
+                        г. Екатеринбург, ул. Луначарского, 171
+                    </div>
+                    <div class="footer__map">
+                        <iframe src="https://yandex.ru/map-widget/v1/?scroll=false&um=constructor%3Ad2a6e2bfd6b402915c9951448194c97b3e966dc89edbe31652d68b483e7414a6&amp;source=constructor"
+                                width="100%" height="400" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__contacts">
+                        <a href="./" class="footer__contacts-home-link">
+                            <img class="footer__contacts-image" src="./assets/images/header-menu-image.png" width="191"
+                                 height="174">
+                        </a>
+                        <strong>
+                            <a class="footer__contacts-link" href="tel:79530055575">+7 953 00 555 75</a>
+                        </strong>
+                        <strong>
+                            <a class="footer__contacts-link" href="mailto:info@supermomekb.ru">info@supermomekb.ru</a>
+                        </strong>
+                        <p>
+                            г. Екатеринбург, ул. Луначарского, 171
+                        </p>
+                    </div>
+                    <nav class="footer__menu">
+                        <div class="footer__menu-list">
+                            <a href="#" class="footer__menu-link button">
+                                Online-клуб
+                            </a>
+                            <a href="./shkol-nikam.html" class="footer__menu-link button">
+                                Школьникам
+                            </a>
+                            <a href="#" class="footer__menu-link button">
+                                Взрослым
+                            </a>
+                            <a href="./kontakty.html" class="footer__menu-link button">
+                                Контакты
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__camp">
+                <a title="Наш лагерь на портале лагерей" aria-label="Наш лагерь на портале лагерей"
+                   href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+                    <img width="50" height="50" src="./assets/images/camp-logo.jpeg" alt="" class="footer__camp-logo">
+                </a>
+                <a href="https://kidsincamp.ru/camp/supermom" target="_blank" class="footer__camp-link">
+                    Наш лагерь на
+                    <br>
+                    портале лагерей
+                </a>
+            </div>
+
+        </footer>
+
+        <script type="text/javascript"
+                src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
+                async=""></script>
+
+        <script src="./assets/libs/swiper/swiper.js"></script>
+        <script type="module" src="./assets/scripts/main.js"></script>
+    </body>
+
+</html>

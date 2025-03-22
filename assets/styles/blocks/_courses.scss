@@ -1,0 +1,129 @@
+@use "../helpers" as *;
+
+.courses {
+    &__list {
+        display: grid;
+        row-gap: var(--section-padding-y);
+        padding-top: 1rem;
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: 28% 72%;
+        column-gap: 100px;
+        border-radius: var(--border-radius-xxl);
+        box-shadow: var(--card-shadow);
+        padding: fluid(100, 16) fluid(50, 16);
+        position: relative;
+
+        @include laptop {
+            overflow: hidden;
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            text-align: center;
+            row-gap: 2rem;
+        }
+
+        &--violet {
+            background-color: var(--color-violet);
+        }
+
+        &--blue {
+            background-color: var(--color-bg-blue);
+        }
+
+        &--orange {
+            background-color: var(--color-bg-orange);
+        }
+
+        &-tarifs {
+            display: grid;
+            row-gap: 1rem;
+
+            &-list {
+                @include tablet {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                }
+            }
+        
+            &-item {
+                display: flex;
+                align-items: center;
+                column-gap: .5rem;
+
+                @include mobile-s {
+                    display: grid;
+                    grid-template-columns: 40px 1fr;
+                }
+            }
+        }
+
+        &-body {
+            position: relative;
+            z-index: 1;
+            color: var(--color-violet);
+            align-self: end;
+            display: grid;
+            row-gap: 30px;
+            max-width: 570px;
+
+            @include tablet {
+                max-width: 100%;
+            }
+        }
+
+        &-title {
+            color: inherit;
+
+            @include tablet {
+                color: var(--color-white);
+            }
+        }
+
+        &-description {
+            color: inherit;
+            font-weight: 400;
+
+            @include tablet {
+                color: var(--color-white);
+            }
+
+            @include mobile {
+                font-size: 24px;
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            
+            @include tablet {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        &-image {
+            position: absolute;
+            height: 105%;
+            top: -2.5%;
+            right: -10%;
+
+            @include laptop-s {
+                right: unset;
+                left: 30%;
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}

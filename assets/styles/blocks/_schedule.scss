@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.schedule {
+    background: linear-gradient(0deg, #de5bd5 62%, #9265ce 14%);
+    border-radius: var(--border-radius-xxl);
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+
+    &__iframe {
+        display: block;
+        border-radius: var(--border-radius-xxl);
+    }
+}

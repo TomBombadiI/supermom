@@ -1,0 +1,79 @@
+@use "../helpers" as *;
+
+.courses-slider {
+    min-width: 0;
+    position: relative;
+    padding-inline: 45px;
+
+    @include mobile {
+        padding-inline: 0;
+    }
+
+    &__swiper {
+        position: static;
+        padding-bottom: 2rem;
+
+        @include mobile-s-above {
+            padding-block: 2rem;
+        }
+    }
+
+    .swiper {
+        &-slide {
+            transition: all;
+            transition-duration: var(--transition-duration);
+
+            @include mobile-s-above {
+                opacity: 0.6;
+
+                &-active {
+                    scale: 1.1;
+                    opacity: 1;
+                }
+            }
+
+            img {
+                margin-inline: auto;
+            }
+        }
+
+        &-pagination {
+            &-bullet {
+                @include square(15px);
+
+                transition-duration: var(--transition-duration);
+                background-color: var(--color-bg-orange-darker);
+                border: 1px solid var(--color-bg-orange-darker);
+
+                &-active {
+                    background-color: var(--color-accent-2);
+                }
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        z-index: 1;
+
+        svg {
+            margin-left: 10px;
+        }
+
+        &--next {
+            left: unset;
+            right: 0;
+
+            svg {
+                margin-right: 5px;
+            }
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
