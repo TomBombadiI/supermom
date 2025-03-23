@@ -121,7 +121,7 @@
 							<h1 class="hero__title h2">
 								ОБУЧАЕМ АНГЛИЙСКОМУ ДЕТЕЙ ОТ 1 ГОДА И ВЗРОСЛЫХ
 							</h1>
-							<button type="button" class="hero__button-try button">
+							<button data-modal="#order-modal" type="button" class="hero__button-try button">
 								Пробное занятие
 							</button>
 						</div>
@@ -188,7 +188,8 @@
 						<div class="about__body">
 							<div class="about__image-wrapper">
 								<img class="about__image" src="./assets/images/tv.png" width="250" alt="">
-								<button title="Включить видео" aria-label="Включить видео" type="button"
+								<button data-modal="#yt-modal" data-yt-src="https://www.youtube.com/embed/Xa_YVFBoWnA"
+										title="Включить видео" aria-label="Включить видео" type="button"
 										class="about__play-button button button--icon">
 									<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512" width="21px"
 										 height="21px">
@@ -274,10 +275,10 @@
 									Онлайн программа для детей от 3 до 7 лет.
 								</div>
 								<div class="courses__card-buttons">
-									<button type="button" class="courses__card-button button">
+									<button data-modal="#order-modal" type="button" class="courses__card-button button">
 										Оставить заявку
 									</button>
-									<a href="#" class="courses__card-link button button--flat">
+									<a href="./shkol-nikam.html" class="courses__card-link button button--flat">
 										О курсе
 									</a>
 								</div>
@@ -320,10 +321,10 @@
 									занятий.
 								</div>
 								<div class="courses__card-buttons">
-									<button type="button" class="courses__card-button button">
+									<button data-modal="#order-modal" type="button" class="courses__card-button button">
 										Оставить заявку
 									</button>
-									<a href="#" class="courses__card-link button button--flat">
+									<a href="./shkol-nikam.html" class="courses__card-link button button--flat">
 										О курсе
 									</a>
 								</div>
@@ -366,10 +367,10 @@
 									программа для детей от 7 до 18 лет.
 								</div>
 								<div class="courses__card-buttons">
-									<button type="button" class="courses__card-button button">
+									<button data-modal="#order-modal" type="button" class="courses__card-button button">
 										Оставить заявку
 									</button>
-									<a href="#" class="courses__card-link button button--flat">
+									<a href="./shkol-nikam.html" class="courses__card-link button button--flat">
 										О курсе
 									</a>
 								</div>
@@ -401,13 +402,14 @@
 							<div class="gradient-card__description">
 								Умеет выстраивать предложения и правильно употреблять артикли.
 							</div>
-							<div class="gradient-card__button button button--icon button--icon-small">
+							<button data-modal="#yt-modal"
+									class="gradient-card__button button button--icon button--icon-small">
 								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 									 viewbox="0 0 384 512">
 									<path fill="currentColor"
 										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
 								</svg>
-							</div>
+							</button>
 						</li>
 						<li class="successes__item successes__item--down gradient-card gradient-card--pink">
 							<h3 class="gradient-card__title h2">
@@ -423,13 +425,14 @@
 							<div class="gradient-card__description">
 								Самостоятельно читает книги на английском языке.
 							</div>
-							<div class="gradient-card__button button button--icon button--icon-small">
+							<button data-modal="#yt-modal"
+									class="gradient-card__button button button--icon button--icon-small">
 								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 									 viewBox="0 0 384 512">
 									<path fill="currentColor"
 										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
 								</svg>
-							</div>
+							</button>
 						</li>
 						<li class="successes__item gradient-card gradient-card--lightgreen">
 							<h3 class="gradient-card__title h2">
@@ -445,13 +448,14 @@
 							<div class="gradient-card__description">
 								Заняла 2 место на олимпиаде по английскому для дошкольников.
 							</div>
-							<div class="gradient-card__button button button--icon button--icon-small">
+							<button data-modal="#yt-modal"
+									class="gradient-card__button button button--icon button--icon-small">
 								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 									 viewBox="0 0 384 512">
 									<path fill="currentColor"
 										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
 								</svg>
-							</div>
+							</button>
 						</li>
 						<li class="successes__item gradient-card gradient-card--orange">
 							<h3 class="gradient-card__title h2">
@@ -467,13 +471,14 @@
 							<div class="gradient-card__description">
 								Может с легкостью общаться на простые темы.
 							</div>
-							<div class="gradient-card__button button button--icon button--icon-small">
+							<button data-modal="#yt-modal"
+									class="gradient-card__button button button--icon button--icon-small">
 								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 									 viewBox="0 0 384 512">
 									<path fill="currentColor"
 										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
 								</svg>
-							</div>
+							</button>
 						</li>
 						<li class="successes__item gradient-card gradient-card--red">
 							<h3 class="gradient-card__title h2">
@@ -489,13 +494,14 @@
 							<div class="gradient-card__description">
 								Понимает английскую речь в рамках простых предложений, поет песни на английском.
 							</div>
-							<div class="gradient-card__button button button--icon button--icon-small">
+							<button data-modal="#yt-modal"
+									class="gradient-card__button button button--icon button--icon-small">
 								<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 									 viewBox="0 0 384 512">
 									<path fill="currentColor"
 										  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
 								</svg>
-							</div>
+							</button>
 						</li>
 					</ul>
 				</div>
@@ -563,7 +569,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/media-about/r1.png" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -576,7 +583,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/media-about/4.jpg" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -589,7 +597,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/media-about/r1.png" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -615,7 +624,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/reviews/1.png" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -631,7 +641,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/reviews/2.png" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -647,7 +658,8 @@
 							<div class="video-card__preview-wrapper">
 								<img src="./assets/images/reviews/3.png" width="320" height="320" alt=""
 									 class="video-card__preview">
-								<button class="video-card__preview-button button button--icon button--icon-small">
+								<button data-modal="#yt-modal"
+										class="video-card__preview-button button button--icon button--icon-small">
 									<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px"
 										 viewBox="0 0 384 512">
 										<path fill="currentColor"
@@ -724,9 +736,99 @@
 
 		</footer>
 
+		<dialog class="modal order-modal" id="order-modal">
+			<div class="modal__wrapper order-modal__wrapper">
+				<div class="order-modal__logo">
+					<img class="order-modal__logo-image" src="./assets/images/logo.png" width="175" height="136" alt="">
+				</div>
+
+				<form action="/api/send-order" method="POST" class="order-modal__form order-form">
+					<div class="order-form__control">
+						<label for="child-name" class="order-form__label">
+							ФИ ребенка *
+						</label>
+						<input aria-errormessage="child-name-error" type="text" minlength="2" required id="child-name"
+							   name="child_name" class="order-form__input">
+						<div class="order-modal__error-message error-message" id="child-name-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="child-birthday" class="order-form__label">
+							Дата рождения ребенка *
+						</label>
+						<input aria-errormessage="child-birthday-error" type="text" required id="child-birthday"
+							   pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$" name="child_birthday"
+							   class="order-form__input">
+						<div class="order-modal__error-message error-message" id="child-birthday-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="mother-name" class="order-form__label">
+							Имя мамы *
+						</label>
+						<input aria-errormessage="mother-name-error" type="text" minlength="2" required id="mother-name"
+							   name="mother_name" class="order-form__input">
+						<div class="order-modal__error-message error-message" id="mother-name-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="phone" class="order-form__label">
+							Контактный телефон *
+						</label>
+						<input placeholder="+7 (___) ___-__-__" aria-errormessage="phone-error" type="text" required
+							   pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" id="phone" name="phone"
+							   class="order-form__input">
+						<div class="order-modal__error-message error-message" id="phone-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label class="order-form__label order-form__label--checkbox">
+							<input aria-errormessage="agree-error" type="checkbox" required id="agree" name="agree"
+								   class="order-form__input order-form__input--checkbox">
+							<span>
+								Я согласен на обработку и хранение моих персональных данных, в целях обратной связи
+							</span>
+						</label>
+						<div class="order-modal__error-message error-message" id="agree-error">
+						</div>
+					</div>
+					<button type="submit" class="order-modal__submit-button button">
+						Отправить
+					</button>
+				</form>
+
+				<button type="button" class="modal__close-button order-modal__close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+						 fill="currentColor">
+						<path
+							  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+
+				</button>
+			</div>
+		</dialog>
+
+		<dialog class="modal yt-modal" id="yt-modal">
+			<div class="modal__wrapper yt-modal__wrapper">
+
+				<div class="yt-modal__body">
+					<iframe id="yt-source" class="yt-modal__iframe" width="100%" height="100%"
+							src="https://www.youtube.com/embed/aKENHpEQS-k"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+					</iframe>
+				</div>
+
+				<button type="button" class="modal__close-button yt-modal__close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+						 fill="currentColor">
+						<path
+							  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+				</button>
+			</div>
+		</dialog>
+
 		<script type="text/javascript"
 				src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
 				async=""></script>
+		<script src="./assets/libs/moment/moment.js"></script>
+		<script src="./assets/libs/inputMask/inputMask.js"></script>
 		<script src="./assets/libs/swiper/swiper.js"></script>
 		<script type="module" src="./assets/scripts/main.js"></script>
 	</body>

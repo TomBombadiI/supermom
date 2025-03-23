@@ -1,0 +1,22 @@
+@use "../helpers" as *;
+
+.article-modal {
+    max-width: 1200px;
+    width: 95%;
+    border-radius: var(--border-radius-l);
+
+
+    &__wrapper {
+        height: 100%;
+    }
+
+    &__body {
+        height: 100%;
+        padding-top: calc(var(--closeButtonSize) - var(--offset));
+    }
+
+    &__close-button {
+        right: 0;
+        top: 0;
+    }
+}

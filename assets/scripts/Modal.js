@@ -4,7 +4,10 @@ export default class Modal {
     constructor(selector, options = {}) {
         this.selector = selector;
         this.dialog = document.querySelector(selector);
-        if (!this.dialog) throw new Error(`Модальное окно ${selector} не найдено`);
+        if (!this.dialog) {
+            console.warn(`Модальное окно ${selector} не найдено`);
+            return;
+        };
 
         this.options = {
             closeOnClickOutside: options.closeOnClickOutside ?? true,

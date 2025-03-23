@@ -1,3 +1,7 @@
+import Modal from '../scripts/Modal.js';
+import FormValidator from '../scripts/FormValidator.js';
+import FormHandler from '../scripts/FormHandler.js';
+
 class OverlayMenu {
     constructor(headerSelector, options = {}) {
         this.headerElement = document.querySelector(headerSelector);
@@ -114,5 +118,80 @@ const coursesSlider = new Swiper('.courses-slider__swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true
-      },
+    },
 });
+
+const modal = new Modal('#order-modal', {
+});
+
+const orderFormElement = document.querySelector('.order-form');
+const inputPhoneElement = orderFormElement.querySelector('#phone');
+const inputChildBirthdayElement = orderFormElement.querySelector('#child-birthday');
+
+const inputPhoneMask = IMask(inputPhoneElement, {
+    mask: '+7 (000) 000-00-00',
+    definitions: {
+        '0': /[0-9]/
+    },
+    lazy: false
+});
+const inputBirthdayMask = IMask(inputChildBirthdayElement, {
+    mask: Date,
+    pattern: 'd.m.Y',
+    blocks: {
+        d: {
+            mask: IMask.MaskedRange,
+            from: 1,
+            to: 31,
+            maxLength: 2
+        },
+        m: {
+            mask: IMask.MaskedRange,
+            from: 1,
+            to: 12,
+            maxLength: 2
+        },
+        Y: {
+            mask: IMask.MaskedRange,
+            from: 1900,
+            to: (new Date()).getFullYear(), // Текущий год
+            maxLength: 4
+        }
+    },
+    lazy: false, // Не удаляет маску, даже если поле пустое
+    format: function (date) {
+        return moment(date).format('DD.MM.YYYY');
+    },
+    parse: function (str) {
+        return moment(str, 'DD.MM.YYYY').toDate();
+    },
+    autofix: true,
+    prepare: function (str, masked, flags) {
+        if (flags.from === 'input') {
+            str = str.replace(/\D/g, ''); // Удалить все символы, кроме цифр
+        }
+        return str;
+    }
+});
+
+const orderFormValidator = new FormValidator(orderFormElement);
+const orderFormHandler = new FormHandler(orderFormElement, orderFormValidator, {
+    onSuccess: (data) => {
+        console.log(data);
+    },
+    onError: (errors) => {
+        console.log(errors);
+    }
+});
+
+const ytModalSrcElement = document.getElementById('yt-source');
+const ytModal = new Modal('#yt-modal');
+
+const ytModalOpenButtons = document.querySelectorAll('[data-yt-src]');
+ytModalOpenButtons.forEach(element => {
+    element.addEventListener('click', () => {
+        ytModalSrcElement.src = element.dataset.ytSrc ?? '';
+    });
+});
+
+const articleModal = new Modal('#article-modal');

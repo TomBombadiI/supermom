@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SuperMom</title>
 
+        <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
         <link rel="stylesheet" href="./assets/libs/swiper/swiper.css">
         <link rel="stylesheet" href="./assets/styles/main.css">
     </head>
@@ -126,7 +127,7 @@
                                 издательства Oxford. Мы точно знаем, как будет выстроен прогресс Вашего ребенка, и
                                 осуществляем срез знаний на каждом этапе!
                             </div>
-                            <button type="button" class="hero__button-try button">
+                            <button data-modal="#order-modal" type="button" class="hero__button-try button">
                                 Пробное занятие
                             </button>
                         </div>
@@ -228,10 +229,98 @@
 
         </footer>
 
+        <dialog class="modal order-modal" id="order-modal">
+            <div class="modal__wrapper order-modal__wrapper">
+                <div class="order-modal__logo">
+                    <img class="order-modal__logo-image" src="./assets/images/logo.png" width="175" height="136" alt="">
+                </div>
+
+                <form action="/api/send-order" method="POST" class="order-modal__form order-form">
+                    <div class="order-form__control">
+                        <label for="child-name" class="order-form__label">
+                            ФИ ребенка *
+                        </label>
+                        <input aria-errormessage="child-name-error" type="text" minlength="2" required id="child-name"
+                               name="child_name" class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="child-name-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="child-birthday" class="order-form__label">
+                            Дата рождения ребенка *
+                        </label>
+                        <input aria-errormessage="child-birthday-error" type="text" required id="child-birthday"
+                               pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$" name="child_birthday"
+                               class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="child-birthday-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="mother-name" class="order-form__label">
+                            Имя мамы *
+                        </label>
+                        <input aria-errormessage="mother-name-error" type="text" minlength="2" required id="mother-name"
+                               name="mother_name" class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="mother-name-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="phone" class="order-form__label">
+                            Контактный телефон *
+                        </label>
+                        <input placeholder="+7 (___) ___-__-__" aria-errormessage="phone-error" type="text" required
+                               pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" id="phone" name="phone"
+                               class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="phone-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label class="order-form__label order-form__label--checkbox">
+                            <input aria-errormessage="agree-error" type="checkbox" required id="agree" name="agree"
+                                   class="order-form__input order-form__input--checkbox">
+                            <span>
+                                Я согласен на обработку и хранение моих персональных данных, в целях обратной связи
+                            </span>
+                        </label>
+                        <div class="order-modal__error-message error-message" id="agree-error">
+                        </div>
+                    </div>
+                    <button type="submit" class="order-modal__submit-button button">
+                        Отправить
+                    </button>
+                </form>
+
+                <button type="button" class="modal__close-button order-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="modal yt-modal" id="yt-modal">
+            <div class="modal__wrapper yt-modal__wrapper">
+
+                <div class="yt-modal__body">
+                    <iframe id="yt-source" class="yt-modal__iframe" width="100%" height="100%" src=""
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <button type="button" class="modal__close-button yt-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+
         <script type="text/javascript"
                 src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
                 async=""></script>
-
+        <script src="./assets/libs/moment/moment.js"></script>
+        <script src="./assets/libs/inputMask/inputMask.js"></script>
         <script src="./assets/libs/swiper/swiper.js"></script>
         <script type="module" src="./assets/scripts/main.js"></script>
     </body>

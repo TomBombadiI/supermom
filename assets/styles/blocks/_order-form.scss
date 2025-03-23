@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.order-form {
+    display: grid;
+    row-gap: 1rem;
+
+    &__control {
+        display: grid;
+        position: relative;
+    }
+
+    &__label {
+        font-size: fluid(22, 16);
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+        &--checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+            font-size: fluid(18, 15);
+            text-align: left;
+        }
+    }
+
+    &__input {
+        border: 1px solid #ffffff00;
+        background-color: #ffffff66;
+        color: var(--color-white);
+        border-radius: 1rem;
+        padding: .375rem .75rem;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        &--checkbox {
+            @include square(60px);
+            
+            flex-basis: 60px;
+        }
+    }
+}

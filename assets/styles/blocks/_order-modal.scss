@@ -1,0 +1,29 @@
+@use "../helpers" as *;
+
+.order-modal {
+    --closeButtonSize: 44px;
+    max-width: 500px;
+    border-radius: var(--border-radius-xxl);
+
+    @include mobile {
+        max-width: unset;
+    }
+
+    &__wrapper {
+        display: grid;
+        row-gap: fluid(32, 12);
+    }
+
+    &__logo {
+        text-align: center;
+
+        &-image {
+            width: fluid(175, 130);
+            display: inline-block;
+        }
+    }
+
+    &__close-button {
+        color: var(--color-white);
+    }
+}

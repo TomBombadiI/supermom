@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SuperMom</title>
 
+        <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
         <link rel="stylesheet" href="./assets/libs/swiper/swiper.css">
         <link rel="stylesheet" href="./assets/styles/main.css">
     </head>
@@ -120,7 +121,7 @@
                             <div class="hero__description hero__description--font-large">
                                 Статьи о детях, билингвизме и английском языке
                             </div>
-                            <button type="button" class="hero__button-try button">
+                            <button data-modal="#order-modal" type="button" class="hero__button-try button">
                                 Пробное занятие
                             </button>
                         </div>
@@ -128,9 +129,6 @@
                             <img class="hero__image" width="555" height="506" src="./assets/images/hero.png" alt="">
                         </div>
                     </div>
-                    <a href="./raspisanie" class="hero__order button button--rect">
-                        Записаться онлайн
-                    </a>
                 </div>
             </section>
 
@@ -149,9 +147,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -164,9 +162,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -179,9 +177,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -194,9 +192,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -209,9 +207,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -224,9 +222,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -239,9 +237,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -254,9 +252,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                         <li class="articles__list-item article-card">
                             <div class="article-card__preview">
@@ -269,9 +267,9 @@
                             <div class="article-card__description">
                                 Что бы такого ещё такого интересного посмотреть с ребёнком на английском?
                             </div>
-                            <a href="#" class="article-card__button button button--flat">
+                            <button data-modal="#article-modal" class="article-card__button button button--flat">
                                 Читать
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -341,10 +339,120 @@
 
         </footer>
 
+        <dialog class="modal order-modal" id="order-modal">
+            <div class="modal__wrapper order-modal__wrapper">
+                <div class="order-modal__logo">
+                    <img class="order-modal__logo-image" src="./assets/images/logo.png" width="175" height="136" alt="">
+                </div>
+
+                <form action="/api/send-order" method="POST" class="order-modal__form order-form">
+                    <div class="order-form__control">
+                        <label for="child-name" class="order-form__label">
+                            ФИ ребенка *
+                        </label>
+                        <input aria-errormessage="child-name-error" type="text" minlength="2" required id="child-name"
+                               name="child_name" class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="child-name-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="child-birthday" class="order-form__label">
+                            Дата рождения ребенка *
+                        </label>
+                        <input aria-errormessage="child-birthday-error" type="text" required id="child-birthday"
+                               pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$" name="child_birthday"
+                               class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="child-birthday-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="mother-name" class="order-form__label">
+                            Имя мамы *
+                        </label>
+                        <input aria-errormessage="mother-name-error" type="text" minlength="2" required id="mother-name"
+                               name="mother_name" class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="mother-name-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label for="phone" class="order-form__label">
+                            Контактный телефон *
+                        </label>
+                        <input placeholder="+7 (___) ___-__-__" aria-errormessage="phone-error" type="text" required
+                               pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" id="phone" name="phone"
+                               class="order-form__input">
+                        <div class="order-modal__error-message error-message" id="phone-error"></div>
+                    </div>
+                    <div class="order-form__control">
+                        <label class="order-form__label order-form__label--checkbox">
+                            <input aria-errormessage="agree-error" type="checkbox" required id="agree" name="agree"
+                                   class="order-form__input order-form__input--checkbox">
+                            <span>
+                                Я согласен на обработку и хранение моих персональных данных, в целях обратной связи
+                            </span>
+                        </label>
+                        <div class="order-modal__error-message error-message" id="agree-error">
+                        </div>
+                    </div>
+                    <button type="submit" class="order-modal__submit-button button">
+                        Отправить
+                    </button>
+                </form>
+
+                <button type="button" class="modal__close-button order-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="modal article-modal" id="article-modal">
+            <div class="modal__wrapper article-modal__wrapper">
+
+                <div class="article-modal__body raw-content">
+                    <p>Многие взрослые признаются, что учить английский в свое время начали по фильмам, сериалам или
+                        песням на английском. ??<br>⠀<br>А чем дети хуже? ?<br>⠀<br>Мультфильмы — один из самых
+                        доступных и приятных способов погрузить ребенка в иноязычную среду.<br>Подготовили для вас
+                        подборку английских мультиков для дошкольников и детей младшего школьного возраста:<br>⠀<br>?
+                        Happy Rhymes<br>Мультфильм на английском языке с музыкальным сопровождением. В нем вы найдете
+                        веселые стишки и песенки, которые можно легко выучить и напевать с малышом.<br>⠀<br>? Nursery
+                        Rhymes for Babies<br>Если вы хотите создать атмосферу английского языка для вашего малыша, то
+                        вам точно необходимо поставить эту 54-минутную подборку веселых песен на английском.<br>⠀<br>?
+                        Gogo Loves English<br>В мультфильме нет ничего лишнего&nbsp;— показаны только жизненные
+                        ситуации.<br>Новые слова и фразы во время серии повторяют достаточно раз, чтобы малыш их
+                        запомнил. Серии мультфильма короткие, поэтому ребенок не успеет заскучать.<br>⠀<br>? Muzzy in
+                        Gondoland<br>Мультсериал от телеканала BBC, созданный специально для изучения английского
+                        языка иностранцами. Маззи&nbsp;— это пришелец, для которого английский язык&nbsp;— не просто
+                        иностранный, но и инопланетный.<br>⠀<br>? Crawford the Cat<br>Мультфильм для изучения
+                        английского языка полезный во всех отношениях. Кроме популярных английских слов, котик
+                        Кроуфорд учит малышей хорошо себя вести, быть вежливыми, чистить зубы и прибирать свои
+                        игрушки.<br>⠀<br>Мультфильмы для детей постарше:<br>⠀<br>? Little Bear<br>Многосерийный
+                        мультик канадского производства, который рассказывает о главном герое Медвежонке, его семье,
+                        друзьях и увлекательных приключениях. Лучше всего смотреть его после 4 лет<br>⠀<br>? Super
+                        why!<br>Герои этого мультфильма обучают грамматике и знакомят вашего ребенка с новыми
+                        словами.&nbsp;При этом программа рассчитана на тех малышей, которые уже знакомы с английским.
+                        Поэтому в качестве первого занятия его выбирать не стоит.<br>⠀<br>? Peter
+                        Rabbit<br>Мультипликационный сериал получился действительно прекрасным. Рекомендуем приступать
+                        к просмотру не раньше 5 лет&nbsp;— для детей помладше и сюжет, и картинка могут оказаться
+                        сложными.</p>
+                </div>
+
+                <button type="button" class="modal__close-button article-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+
         <script type="text/javascript"
                 src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
                 async=""></script>
-
+        <script src="./assets/libs/moment/moment.js"></script>
+        <script src="./assets/libs/inputMask/inputMask.js"></script>
         <script src="./assets/libs/swiper/swiper.js"></script>
         <script type="module" src="./assets/scripts/main.js"></script>
     </body>

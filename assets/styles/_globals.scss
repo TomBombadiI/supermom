@@ -122,3 +122,33 @@ ul:not([class]) {
     will-change: transform;
     transition: transform 0.1s ease-out;
 }
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+.ws-quiz-container .ws-quiz-btn-el-container {
+    inset: unset !important;
+    top: unset !important;
+    bottom: 1rem !important;
+    left: calc(50vw - var(--scrollbar-width)) !important;
+    transform: translateX(-50%) !important;
+}
+
+.ws-quiz .ws-quiz-modal-overflow {
+    z-index: 998 !important;
+}
+
+.ws-quiz .ws-quiz-modal-wrap {
+    z-index: 999 !important;
+}
+
+.ws-quiz-container {
+    z-index: 996;
+}
+
+.ws-quiz-mobile .ws-quiz-btn-container {
+    text-align: center;
+}
