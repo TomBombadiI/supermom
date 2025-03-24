@@ -213,7 +213,9 @@ const isVisited = getCookie('visited');
 
 const giftModal = new Modal('#gift-modal');
 if (!isVisited) {
-    giftModal.open();
+    setTimeout(() => {
+        giftModal.open();
+    }, 10000);
 
     // Устанавливаем куку на 365 дней
     setCookie('visited', 'true', 7);
