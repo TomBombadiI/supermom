@@ -129,26 +129,17 @@ ul:not([class]) {
     font-weight: bold;
 }
 
-.ws-quiz-container .ws-quiz-btn-el-container {
-    inset: unset !important;
-    top: unset !important;
-    bottom: 1rem !important;
-    left: calc(50vw - var(--scrollbar-width)) !important;
-    transform: translateX(-50%) !important;
-}
+.fixed-button {
+    position: fixed;
+    bottom: 1rem;
+    left: calc(50vw - (var(--scrollbar-width) / 2));
+    transform: translateX(-50%);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
 
-.ws-quiz .ws-quiz-modal-overflow {
-    z-index: 998 !important;
-}
-
-.ws-quiz .ws-quiz-modal-wrap {
-    z-index: 999 !important;
-}
-
-.ws-quiz-container {
-    z-index: 996;
-}
-
-.ws-quiz-mobile .ws-quiz-btn-container {
-    text-align: center;
+    &:active {
+        scale: 1 !important;
+    }
 }

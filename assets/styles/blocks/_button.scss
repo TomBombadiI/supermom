@@ -74,4 +74,13 @@
             }
         }
     }
+
+    &--blue {
+        font-size: fluid(18, 15);
+        color: var(--color-white);
+        background-color: #0900FE;
+        border-radius: 10px;
+        box-shadow: var(--card-shadow);
+        width: max-content;
+    }
 }

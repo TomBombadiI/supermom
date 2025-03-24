@@ -1,0 +1,101 @@
+@use "../helpers" as *;
+
+.gift-modal {
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+
+    @include tablet {
+        max-width: 95%;
+    }
+
+    .modal__wrapper {
+        padding: 0;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 624px 1fr;
+        min-height: 480px;
+
+        @include tablet {
+            grid-template-columns: 1fr 276px;
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        position: relative;
+        background: url("../images/gift-bg.png") center/cover no-repeat;
+        height: 100%;
+        width: 100%;
+        max-width: 624px;
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+            min-height: 250px;
+        }
+    }
+
+    &__info {
+        @include flex-center;
+
+        margin-top: 10px;
+        margin-inline: 7px;
+        background-color: var(--color-gift-blue);
+        border-radius: 10px;
+        font-size: fluid(26, 14);
+        padding-block: 5.5px;
+        text-align: center;
+
+        @include tablet {
+            margin-top: var(--closeButtonSize);
+            margin-bottom: 10px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px 14px;
+    }
+
+    &__title {
+        color: var(--color-black);
+        font-size: 20px;
+        margin-bottom: 11px;
+        font-weight: 600;
+        line-height: 1, 35;
+    }
+
+    &__input {
+        padding: 9px 20px;
+        border-radius: 5px;
+        border: 1px solid #e6e6e6;
+        font-size: 16px;
+        color: #757575;
+        width: 100%;
+    }
+
+    .modal__close-button {
+        color: var(--color-black);
+    }
+
+    &__button {
+        background-color: #fe6f08;
+        border-radius: 5px;
+        font-size: 16px;
+        color: var(--color-white);
+        padding-block: 14px;
+    }
+
+    &__agree {
+        font-size: 12px;
+        color: var(--color-black);
+    }
+}

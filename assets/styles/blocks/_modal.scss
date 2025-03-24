@@ -20,7 +20,7 @@
     @include tablet-above {
         margin: 0;
         margin-block: auto;
-        margin-left: calc(50vw - var(--scrollbar-width));
+        margin-left: calc(50vw - (var(--scrollbar-width) / 2));
         translate: -50%;
     }
 
