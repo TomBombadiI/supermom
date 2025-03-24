@@ -36,12 +36,12 @@
 								</span>
 								<ul class="header__menu-sublist toggle-target">
 									<li class="header__menu-item">
-										<a href="#" class="header__menu-link">
+										<a href="https://supermomenglish.com/supercamp2025/" class="header__menu-link">
 											Выездной
 										</a>
 									</li>
 									<li class="header__menu-item">
-										<a href="#" class="header__menu-link">
+										<a href="https://supermomenglish.com/supercamp2025/" class="header__menu-link">
 											Городской
 										</a>
 									</li>
@@ -84,7 +84,7 @@
 								<a href="./kontakty.html" class="header__menu-link">Контакты</a>
 							</li>
 							<li class="header__menu-item">
-								<a href="#" class="header__menu-link">Франшиза</a>
+								<a href="https://superfranch.com/" class="header__menu-link">Франшиза</a>
 							</li>
 						</ul>
 						<img class="header__menu-image visible-tablet" src="./assets/images/header-menu-image.png"
@@ -123,7 +123,7 @@
 								<br><br>
 								Более 2.000 отзывов от родителей
 							</div>
-							<button type="button" class="hero__button-try button">
+							<button data-modal="#order-modal" type="button" class="hero__button-try button">
 								Пробное занятие
 							</button>
 						</div>
@@ -136,52 +136,59 @@
 
 			<section class="successes section">
 				<div class="successes__inner container">
-					<h2 class="successes__title h1 section-title">
-						ЗАЧЕМ ИЗУЧАТЬ ТАК РАНО?
-					</h2>
-					<div class="successes__subtitle h3">
-						Составляем индивидуальный план занятий под каждого ребенка
+					<div class="successes__body">
+						<h2 class="successes__title h1 section-title">
+							ЗАЧЕМ ИЗУЧАТЬ ТАК РАНО?
+						</h2>
+						<div class="successes__subtitle h3">
+							Составляем индивидуальный план занятий под каждого ребенка
+						</div>
+						<ul class="successes__list successes__list--top">
+							<li class="successes__item gradient-card">
+								<div class="gradient-card__image-wrapper">
+									<img src="./assets/images/monkey/1.webp" width="320" height="320" alt=""
+										 class="gradient-card__image">
+								</div>
+								<h3 class="gradient-card__title h2">
+									Занятие для всей
+									семьи
+								</h3>
+								<div class="gradient-card__description">
+									Изучая язык всей семьей, вы объединяетесь общей целью
+								</div>
+							</li>
+							<li class="successes__item successes__item--top gradient-card gradient-card--pink">
+								<div class="gradient-card__image-wrapper">
+									<img src="./assets/images/monkey/2.webp" width="320" height="320" alt=""
+										 class="gradient-card__image">
+								</div>
+								<h3 class="gradient-card__title h2">
+									Создание и укрепление межкультурных связей
+								</h3>
+								<div class="gradient-card__description">
+									Ребёнок лучше понимает истории и традиции других стран
+								</div>
+							</li>
+							<li class="successes__item gradient-card gradient-card--lightgreen">
+								<div class="gradient-card__image-wrapper">
+									<img src="./assets/images/monkey/3.webp" width="320" height="320" alt=""
+										 class="gradient-card__image">
+								</div>
+								<h3 class="gradient-card__title h2">
+									Лучшее понимание родного языка
+								</h3>
+								<div class="gradient-card__description">
+									Расширение и обогащение
+									словарного запаса.
+								</div>
+							</li>
+						</ul>
+
+						<img src="./assets/images/letters/c.png" data-scroll-translate-weight="35" alt="" width="180"
+							 height="210" class="successes__decor scroll-translate">
+						<img src="./assets/images/letters/d.png" data-scroll-translate-weight="20" alt="" width="180"
+							 height="210" class="successes__decor scroll-translate">
 					</div>
-					<ul class="successes__list successes__list--top">
-						<li class="successes__item gradient-card">
-							<div class="gradient-card__image-wrapper">
-								<img src="./assets/images/monkey/1.webp" width="320" height="320" alt=""
-									 class="gradient-card__image">
-							</div>
-							<h3 class="gradient-card__title h2">
-								Занятие для всей
-								семьи
-							</h3>
-							<div class="gradient-card__description">
-								Изучая язык всей семьей, вы объединяетесь общей целью
-							</div>
-						</li>
-						<li class="successes__item successes__item--top gradient-card gradient-card--pink">
-							<div class="gradient-card__image-wrapper">
-								<img src="./assets/images/monkey/2.webp" width="320" height="320" alt=""
-									 class="gradient-card__image">
-							</div>
-							<h3 class="gradient-card__title h2">
-								Создание и укрепление межкультурных связей
-							</h3>
-							<div class="gradient-card__description">
-								Ребёнок лучше понимает истории и традиции других стран
-							</div>
-						</li>
-						<li class="successes__item gradient-card gradient-card--lightgreen">
-							<div class="gradient-card__image-wrapper">
-								<img src="./assets/images/monkey/3.webp" width="320" height="320" alt=""
-									 class="gradient-card__image">
-							</div>
-							<h3 class="gradient-card__title h2">
-								Лучшее понимание родного языка
-							</h3>
-							<div class="gradient-card__description">
-								Расширение и обогащение
-								словарного запаса.
-							</div>
-						</li>
-					</ul>
 				</div>
 			</section>
 
@@ -201,7 +208,7 @@
 								Топ 10 детских YouTube каналов на английском языке
 							</h3>
 							<div class="article-card__buttons">
-								<button type="button" class="article-card__button button">
+								<button data-modal="#order-modal" type="button" class="article-card__button button">
 									Записаться
 								</button>
 								<a href="#" class="article-card__button button button--flat">
@@ -224,7 +231,7 @@
 								Топ 10 детских YouTube каналов на английском языке
 							</h3>
 							<div class="article-card__buttons">
-								<button type="button" class="article-card__button button">
+								<button data-modal="#order-modal" type="button" class="article-card__button button">
 									Записаться
 								</button>
 								<a href="#" class="article-card__button button button--flat">
@@ -247,7 +254,7 @@
 								Топ 10 детских YouTube каналов на английском языке
 							</h3>
 							<div class="article-card__buttons">
-								<button type="button" class="article-card__button button">
+								<button data-modal="#order-modal" type="button" class="article-card__button button">
 									Записаться
 								</button>
 								<a href="#" class="article-card__button button button--flat">
@@ -270,7 +277,7 @@
 								Топ 10 детских YouTube каналов на английском языке
 							</h3>
 							<div class="article-card__buttons">
-								<button type="button" class="article-card__button button">
+								<button data-modal="#order-modal" type="button" class="article-card__button button">
 									Записаться
 								</button>
 								<a href="#" class="article-card__button button button--flat">
@@ -361,7 +368,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<button type="button" class="price__button button">
+					<button data-modal="#order-modal" type="button" class="price__button button">
 						Оставить заявку
 					</button>
 					<a href="#" class="price__file">
@@ -434,10 +441,153 @@
 
 		</footer>
 
-		<script type="text/javascript"
-				src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
-				async=""></script>
+		<dialog class="modal order-modal" id="order-modal">
+			<div class="modal__wrapper order-modal__wrapper">
+				<div class="order-modal__logo">
+					<img class="order-modal__logo-image" src="./assets/images/logo.png" width="175" height="136" alt="">
+				</div>
 
+				<form action="/api/send-order" method="POST" class="order-modal__form order-form">
+					<div class="order-form__control">
+						<label for="child-name" class="order-form__label">
+							ФИ ребенка *
+						</label>
+						<input aria-errormessage="child-name-error" type="text" minlength="2" required id="child-name"
+							   name="child_name" class="order-form__input">
+						<div class="order-modal__error-message error-message" id="child-name-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="child-birthday" class="order-form__label">
+							Дата рождения ребенка *
+						</label>
+						<input aria-errormessage="child-birthday-error" type="text" required id="child-birthday"
+							   pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[012])\.(19|20)\d\d$" name="child_birthday"
+							   class="order-form__input">
+						<div class="order-modal__error-message error-message" id="child-birthday-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="mother-name" class="order-form__label">
+							Имя мамы *
+						</label>
+						<input aria-errormessage="mother-name-error" type="text" minlength="2" required id="mother-name"
+							   name="mother_name" class="order-form__input">
+						<div class="order-modal__error-message error-message" id="mother-name-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label for="phone" class="order-form__label">
+							Контактный телефон *
+						</label>
+						<input placeholder="+7 (___) ___-__-__" aria-errormessage="phone-error" type="text" required
+							   pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" id="phone" name="phone"
+							   class="order-form__input">
+						<div class="order-modal__error-message error-message" id="phone-error"></div>
+					</div>
+					<div class="order-form__control">
+						<label class="order-form__label order-form__label--checkbox">
+							<input aria-errormessage="agree-error" type="checkbox" required id="agree" name="agree"
+								   class="order-form__input order-form__input--checkbox">
+							<span>
+								Я согласен на обработку и хранение моих персональных данных, в целях обратной связи
+							</span>
+						</label>
+						<div class="order-modal__error-message error-message" id="agree-error">
+						</div>
+					</div>
+					<button type="submit" class="order-modal__submit-button button">
+						Отправить
+					</button>
+				</form>
+
+				<button type="button" class="modal__close-button order-modal__close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+						 fill="currentColor">
+						<path
+							  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+
+				</button>
+			</div>
+		</dialog>
+
+		<dialog class="modal yt-modal" id="yt-modal">
+			<div class="modal__wrapper yt-modal__wrapper">
+
+				<div class="yt-modal__body">
+					<iframe id="yt-source" class="yt-modal__iframe" width="100%" height="100%"
+							src="https://www.youtube.com/embed/aKENHpEQS-k"
+							referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+					</iframe>
+				</div>
+
+				<button type="button" class="modal__close-button yt-modal__close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+						 fill="currentColor">
+						<path
+							  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+				</button>
+			</div>
+		</dialog>
+
+		<dialog class="modal gift-modal" id="gift-modal">
+			<div class="modal__wrapper">
+
+				<div class="gift-modal__body">
+					<div class="gift-modal__image">
+						<div class="gift-modal__info">
+							Получите пробный урок в подарок
+						</div>
+					</div>
+					<form action="/send-gift" class="gift-modal__form">
+						<div class="gift-modal__title">
+							Чтобы получить подарок, заполните поля ниже и нажмите на кнопку «Записаться»
+						</div>
+						<div class="gift-modal__control">
+							<label for="child-age" class="visually-hidden"></label>
+							<input class="gift-modal__input" type="text" required name="child_age" id="child-age"
+								   placeholder="Возраст ребёнка">
+						</div>
+						<div class="gift-modal__control">
+							<label for="gift-name" class="visually-hidden"></label>
+							<input class="gift-modal__input" type="text" required name="gift_name" id="gift-name"
+								   placeholder="Ваше имя">
+						</div>
+						<div class="gift-modal__control">
+							<label for="gift-phone" class="visually-hidden"></label>
+							<input class="gift-modal__input" type="text" required name="gift_phone" id="gift-phone"
+								   placeholder="Номер телефона">
+						</div>
+						<button type="submit" class="gift-modal__button button button--flat">
+							Записаться
+						</button>
+						<div class="gift-modal__agree">
+							Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+						</div>
+					</form>
+				</div>
+
+				<button type="button" class="modal__close-button yt-modal__close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+						 fill="currentColor">
+						<path
+							  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+					</svg>
+				</button>
+			</div>
+		</dialog>
+
+		<button data-modal="#gift-modal" type="button" class="fixed-button button button--blue">
+			<span>
+				<img src="./assets/images/logo.png" width="50" height="38" alt="">
+			</span>
+			<span>
+				Записаться на занятие
+			</span>
+		</button>
+
+		<script src="./assets/libs/SmoothScroll/SmoothScroll.js"></script>
+		<script src="./assets/libs/moment/moment.js"></script>
+		<script src="./assets/libs/inputMask/inputMask.js"></script>
 		<script src="./assets/libs/swiper/swiper.js"></script>
 		<script type="module" src="./assets/scripts/main.js"></script>
 	</body>

@@ -1,6 +1,8 @@
 @use "../helpers" as *;
 
 .about {
+    overflow-x: hidden;
+
     &__decor {
         color: var(--color-violet);
         width: 100%;
@@ -39,20 +41,20 @@
         }
 
         &-decor {
-            display: none;
             position: absolute;
-            top: -100%;
+            top: 0;
             left: 0;
-            translate: -50%;
+            translate: -50% -50%;
 
             &:last-child {
-                top: -50%;
+                top: 0;
                 left: unset;
                 right: 0;
-                translate: 50%;
+                scale: -1 1;
+                translate: 50% -50%;
             }
         }
-    }
+}
 
     &__image-wrapper {
         @include flex-center;
@@ -86,6 +88,11 @@
     &__content {
         display: grid;
         row-gap: 1rem;
+        padding-right: 60px;
+
+        @include tablet {
+            padding-right: 0;
+        }
 
         &-title {
             @include tablet {

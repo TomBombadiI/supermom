@@ -86,40 +86,42 @@ toggleControllerElements.forEach(element => {
     });
 });
 
-const coursesSlider = new Swiper('.courses-slider__swiper', {
-    slidesPerView: 3,
-    centeredSlides: true,
-    loop: true,
-    spaceBetween: 16,
-    navigation: {
-        nextEl: '.courses-slider__nav--next',
-        prevEl: '.courses-slider__nav--prev',
-    },
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            centeredSlides: false,
+if (document.querySelector('.courses-slider__swiper')) {
+    const coursesSlider = new Swiper('.courses-slider__swiper', {
+        slidesPerView: 3,
+        centeredSlides: true,
+        loop: true,
+        spaceBetween: 16,
+        navigation: {
+            nextEl: '.courses-slider__nav--next',
+            prevEl: '.courses-slider__nav--prev',
         },
-        360: {
-            slidesPerView: 1.5,
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                centeredSlides: false,
+            },
+            360: {
+                slidesPerView: 1.5,
+            },
+            480: {
+                slidesPerView: 2,
+            },
+            767: {
+                slidesPerView: 2.5,
+            },
+            1023: {
+                slidesPerView: 3,
+            }
         },
-        480: {
-            slidesPerView: 2,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
         },
-        767: {
-            slidesPerView: 2.5,
-        },
-        1023: {
-            slidesPerView: 3,
-        }
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-    },
-});
+    });
+}
 
 const modal = new Modal('#order-modal', {
 });
@@ -216,3 +218,50 @@ if (!isVisited) {
     // Устанавливаем куку на 365 дней
     setCookie('visited', 'true', 7);
 }
+
+const scrollTranslateElements = document.querySelectorAll('.scroll-translate');
+const headerHeight = document.querySelector('header').scrollHeight;
+
+scrollTranslateElements.forEach(element => {
+    updateScrollTranslate(element);
+});
+
+window.addEventListener('scroll', () => {
+    scrollTranslateElements.forEach(element => {
+        updateScrollTranslate(element);
+    })
+});
+
+function isInViewportPercent(el, percentVisible = 0.2) {
+    const rect = el.getBoundingClientRect();
+
+    // Размеры элемента и экрана
+    const elementHeight = rect.height;
+    const viewportHeight = window.innerHeight;
+
+    // Границы пересечения
+    const visibleTop = Math.max(rect.top, 0);
+    const visibleBottom = Math.min(rect.bottom, viewportHeight);
+
+    const visibleHeight = visibleBottom - visibleTop;
+
+    // Если элемент вообще не пересекается с экраном
+    if (visibleHeight <= 0 || elementHeight === 0) {
+        return false;
+    }
+
+    const visibilityRatio = visibleHeight / elementHeight;
+
+    return visibilityRatio >= percentVisible;
+}
+
+function updateScrollTranslate(element) {
+    if (isInViewportPercent(element)) {
+        const elementTopY = element.getBoundingClientRect().top + window.scrollY;
+        const scrollRelativeToElement = window.scrollY - elementTopY + window.innerHeight;
+        const weight = element.dataset.scrollTranslateWeight ?? 10;
+
+        element.style.transform = `translateY(${scrollRelativeToElement * weight / 100}px)`
+    }
+}
+

@@ -37,12 +37,12 @@
                                 </span>
                                 <ul class="header__menu-sublist toggle-target">
                                     <li class="header__menu-item">
-                                        <a href="#" class="header__menu-link">
+                                        <a href="https://supermomenglish.com/supercamp2025/" class="header__menu-link">
                                             Выездной
                                         </a>
                                     </li>
                                     <li class="header__menu-item">
-                                        <a href="#" class="header__menu-link">
+                                        <a href="https://supermomenglish.com/supercamp2025/" class="header__menu-link">
                                             Городской
                                         </a>
                                     </li>
@@ -85,7 +85,7 @@
                                 <a href="./kontakty.html" class="header__menu-link">Контакты</a>
                             </li>
                             <li class="header__menu-item">
-                                <a href="#" class="header__menu-link">Франшиза</a>
+                                <a href="https://superfranch.com/" class="header__menu-link">Франшиза</a>
                             </li>
                         </ul>
                         <img class="header__menu-image visible-tablet" src="./assets/images/header-menu-image.png"
@@ -407,6 +407,82 @@
             </div>
         </dialog>
 
+        <dialog class="modal yt-modal" id="yt-modal">
+            <div class="modal__wrapper yt-modal__wrapper">
+
+                <div class="yt-modal__body">
+                    <iframe id="yt-source" class="yt-modal__iframe" width="100%" height="100%"
+                            src="https://www.youtube.com/embed/aKENHpEQS-k"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <button type="button" class="modal__close-button yt-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+
+        <dialog class="modal gift-modal" id="gift-modal">
+            <div class="modal__wrapper">
+
+                <div class="gift-modal__body">
+                    <div class="gift-modal__image">
+                        <div class="gift-modal__info">
+                            Получите пробный урок в подарок
+                        </div>
+                    </div>
+                    <form action="/send-gift" class="gift-modal__form">
+                        <div class="gift-modal__title">
+                            Чтобы получить подарок, заполните поля ниже и нажмите на кнопку «Записаться»
+                        </div>
+                        <div class="gift-modal__control">
+                            <label for="child-age" class="visually-hidden"></label>
+                            <input class="gift-modal__input" type="text" required name="child_age" id="child-age"
+                                   placeholder="Возраст ребёнка">
+                        </div>
+                        <div class="gift-modal__control">
+                            <label for="gift-name" class="visually-hidden"></label>
+                            <input class="gift-modal__input" type="text" required name="gift_name" id="gift-name"
+                                   placeholder="Ваше имя">
+                        </div>
+                        <div class="gift-modal__control">
+                            <label for="gift-phone" class="visually-hidden"></label>
+                            <input class="gift-modal__input" type="text" required name="gift_phone" id="gift-phone"
+                                   placeholder="Номер телефона">
+                        </div>
+                        <button type="submit" class="gift-modal__button button button--flat">
+                            Записаться
+                        </button>
+                        <div class="gift-modal__agree">
+                            Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+                        </div>
+                    </form>
+                </div>
+
+                <button type="button" class="modal__close-button yt-modal__close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px"
+                         fill="currentColor">
+                        <path
+                              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </button>
+            </div>
+        </dialog>
+
+        <button data-modal="#gift-modal" type="button" class="fixed-button button button--blue">
+            <span>
+                <img src="./assets/images/logo.png" width="50" height="38" alt="">
+            </span>
+            <span>
+                Записаться на занятие
+            </span>
+        </button>
+
         <dialog class="modal article-modal" id="article-modal">
             <div class="modal__wrapper article-modal__wrapper">
 
@@ -448,9 +524,7 @@
             </div>
         </dialog>
 
-        <script type="text/javascript"
-                src="https://cdn.envybox.io/widget/cbk.js?wcb_code=ee7d328d3b70b5a864737ae910304d1f" charset="UTF-8"
-                async=""></script>
+        <script src="./assets/libs/SmoothScroll/SmoothScroll.js"></script>
         <script src="./assets/libs/moment/moment.js"></script>
         <script src="./assets/libs/inputMask/inputMask.js"></script>
         <script src="./assets/libs/swiper/swiper.js"></script>

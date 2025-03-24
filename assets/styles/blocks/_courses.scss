@@ -1,6 +1,8 @@
 @use "../helpers" as *;
 
 .courses {
+    overflow-x: hidden;
+
     &__list {
         display: grid;
         row-gap: var(--section-padding-y);
@@ -16,7 +18,7 @@
         padding: fluid(100, 16) fluid(50, 16);
         position: relative;
 
-        @include laptop {
+        @include laptop-s {
             overflow: hidden;
         }
 
@@ -51,11 +53,11 @@
                     gap: 1rem;
                 }
             }
-        
+
             &-item {
                 display: flex;
                 align-items: center;
-                column-gap: .5rem;
+                column-gap: 0.5rem;
 
                 @include mobile-s {
                     display: grid;
@@ -103,7 +105,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            
+
             @include tablet {
                 justify-content: center;
                 flex-wrap: wrap;
@@ -122,6 +124,25 @@
             }
 
             @include tablet {
+                display: none;
+            }
+        }
+
+        &-decor {
+            position: absolute;
+            top: 0;
+            left: -4%;
+            translate: -50%;
+            z-index: 1;
+
+            &:last-child {
+                top: 20%;
+                left: unset;
+                right: -10%;
+                translate: 50%;
+            }
+
+            @include laptop-s {
                 display: none;
             }
         }

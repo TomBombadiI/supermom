@@ -353,6 +353,9 @@ body {
   font-size: 18px;
   font-family: var(--font-family-base);
   color: var(--color-white);
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
@@ -459,7 +462,12 @@ ul:not([class]) {
 
 .scroll-translate {
   will-change: transform;
-  transition: transform 0.1s ease-out;
+  transition: transform 0.01s ease-in;
+}
+@media (max-width: 1023px) {
+  .scroll-translate {
+    display: none;
+  }
 }
 
 .error-message {
@@ -472,7 +480,7 @@ ul:not([class]) {
   position: fixed;
   bottom: 1rem;
   left: calc(50vw - var(--scrollbar-width) / 2);
-  transform: translateX(-50%);
+  transform: translateX(calc((50% - (var(--scrollbar-width)) / 2) * -1));
   z-index: 900;
   display: flex;
   align-items: center;
@@ -903,7 +911,7 @@ ul:not([class]) {
     margin: 0;
     margin-block: auto;
     margin-left: calc(50vw - var(--scrollbar-width) / 2);
-    translate: -50%;
+    translate: calc((50% - (var(--scrollbar-width)) / 2) * -1);
   }
 }
 @media (max-width: 767px) {
@@ -1510,6 +1518,9 @@ ul:not([class]) {
   }
 }
 
+.about {
+  overflow-x: hidden;
+}
 .about__decor {
   color: var(--color-violet);
   width: 100%;
@@ -1543,17 +1554,17 @@ ul:not([class]) {
   }
 }
 .about__body-decor {
-  display: none;
   position: absolute;
-  top: -100%;
+  top: 0;
   left: 0;
-  translate: -50%;
+  translate: -50% -50%;
 }
 .about__body-decor:last-child {
-  top: -50%;
+  top: 0;
   left: unset;
   right: 0;
-  translate: 50%;
+  scale: -1 1;
+  translate: 50% -50%;
 }
 .about__image-wrapper {
   display: flex;
@@ -1590,6 +1601,12 @@ ul:not([class]) {
 .about__content {
   display: grid;
   row-gap: 1rem;
+  padding-right: 60px;
+}
+@media (max-width: 1023px) {
+  .about__content {
+    padding-right: 0;
+  }
 }
 @media (max-width: 1023px) {
   .about__content-title {
@@ -1602,6 +1619,9 @@ ul:not([class]) {
   margin-top: 2rem;
 }
 
+.courses {
+  overflow-x: hidden;
+}
 .courses__list {
   display: grid;
   row-gap: var(--section-padding-y);
@@ -1616,7 +1636,7 @@ ul:not([class]) {
   padding: clamp(1rem, -0.05rem + 5.25vw, 6.25rem) clamp(1rem, 0.575rem + 2.125vw, 3.125rem);
   position: relative;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1180px) {
   .courses__card {
     overflow: hidden;
   }
@@ -1725,7 +1745,31 @@ ul:not([class]) {
     display: none;
   }
 }
+.courses__card-decor {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  translate: -50%;
+  z-index: 1;
+}
+.courses__card-decor:last-child {
+  top: 20%;
+  left: unset;
+  right: -10%;
+  translate: 50%;
+}
+@media (max-width: 1180px) {
+  .courses__card-decor {
+    display: none;
+  }
+}
 
+.successes {
+  overflow-x: hidden;
+}
+.successes__body {
+  position: relative;
+}
 .successes__subtitle {
   text-align: center;
 }
@@ -1772,6 +1816,24 @@ ul:not([class]) {
   display: block;
   margin-inline: auto;
   margin-top: 2rem;
+}
+.successes__decor {
+  position: absolute;
+  top: 0;
+  left: -4%;
+  translate: -50%;
+  z-index: 1;
+}
+.successes__decor:last-child {
+  top: 20%;
+  left: unset;
+  right: -5%;
+  translate: 50%;
+}
+@media (max-width: 1180px) {
+  .successes__decor {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -2214,7 +2276,7 @@ ul:not([class]) {
   column-gap: 0.5rem;
   background-color: var(--color-white);
   padding: 0.5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
 }
 .footer__camp-link {
   color: var(--color-black);
